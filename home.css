@@ -891,36 +891,56 @@
 }
 
 /* ---------- trabajo ---------- */
-.work-grid {
+.video-row {
   display: grid;
-  grid-template-columns: 330px 1fr;
-  gap: clamp(1.6rem, 4vw, 3.5rem);
+  grid-template-columns: 1fr 1fr;
+  gap: 1.4rem;
   margin-top: 3.2rem;
+}
+.video-item {
+  display: flex;
   align-items: center;
+  gap: 1.6rem;
+  padding: 1.1rem;
+  border-radius: var(--radius-lg);
+  background: #fff;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-sm);
 }
 .video-card {
-  border-radius: var(--radius-lg);
+  flex: none;
+  width: 230px;
+  border-radius: 22px;
   overflow: hidden;
   background: #000;
   box-shadow: var(--shadow);
-  border: 6px solid #fff;
 }
 .video-card video {
   width: 100%;
   height: auto;
-  aspect-ratio: 480/848;
+  aspect-ratio: 9/16;
   object-fit: cover;
   background: #000;
 }
-.work-side h3 {
-  font-size: clamp(1.6rem, 3vw, 2.2rem);
-  margin-top: 0.8rem;
+.video-copy h3 {
+  font-size: clamp(1.4rem, 2.4vw, 1.9rem);
+  margin: 0.7rem 0;
+}
+.video-copy p {
+  color: var(--muted);
+}
+.video-copy small {
+  display: block;
+  margin-top: 0.9rem;
+  font-size: 0.78rem;
+  color: var(--green);
+  font-weight: 700;
 }
 .gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 0.8rem;
-  margin-top: 1.8rem;
+  margin-top: 1.4rem;
 }
 .gallery-card {
   position: relative;
@@ -1309,12 +1329,11 @@
   .pack.featured:hover {
     transform: translateY(-6px);
   }
-  .work-grid {
+  .video-row {
     grid-template-columns: 1fr;
   }
-  .video-card {
-    max-width: 340px;
-    margin-inline: auto;
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
   }
   .stats {
     grid-template-columns: 1fr 1fr;
@@ -1363,6 +1382,13 @@
   }
   .gallery {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .video-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  .video-card {
+    width: min(260px, 100%);
   }
   .pg-card {
     min-height: 340px;
