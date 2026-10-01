@@ -186,8 +186,8 @@ p {
   box-shadow: 0 16px 30px -12px rgb(255 176 0 / 0.9);
 }
 .btn svg {
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   fill: currentColor;
 }
 .btn-dark {
@@ -439,39 +439,52 @@ p {
   bottom: 18px;
   z-index: 90;
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
-  gap: 0.6rem;
-  background: var(--wa);
-  color: #052e16;
+  gap: 0.7rem;
   font-weight: 800;
-  padding: 0.85rem 1.2rem 0.85rem 0.95rem;
-  border-radius: 999px;
-  box-shadow: 0 14px 34px -10px rgb(37 211 102 / 0.8);
   transition: transform 0.2s;
 }
 .wa:hover {
   transform: translateY(-3px) scale(1.03);
 }
 .wa svg {
-  width: 26px;
-  height: 26px;
-  fill: currentColor;
+  position: relative;
+  width: 64px;
+  height: 64px;
+  padding: 15px;
+  border-radius: 50%;
+  fill: #fff;
+  background: linear-gradient(145deg, #3cf07f, #0e9c4f);
+  box-shadow:
+    0 0 0 3px #fff,
+    0 14px 30px -8px rgb(14 156 79 / 0.85);
+}
+.wa span {
+  padding: 0.6rem 1.1rem;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--forest);
+  font-size: 0.92rem;
+  box-shadow: var(--shadow-sm);
 }
 .wa::before {
   content: "";
   position: absolute;
-  inset: 0;
-  border-radius: inherit;
+  right: 0;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
   border: 2px solid var(--wa);
   animation: ping 2.6s ease-out infinite;
 }
 @keyframes ping {
   0% {
     transform: scale(1);
-    opacity: 0.7;
+    opacity: 0.8;
   }
   100% {
-    transform: scale(1.35, 1.7);
+    transform: scale(1.5);
     opacity: 0;
   }
 }
@@ -634,9 +647,6 @@ p {
   }
   .wa span {
     display: none;
-  }
-  .wa {
-    padding: 0.9rem;
   }
   .footer-bottom {
     padding-right: 4.5rem;
