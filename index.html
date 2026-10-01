@@ -6,597 +6,711 @@
       name="viewport"
       content="width=device-width,initial-scale=1,viewport-fit=cover"
     />
-    <title>Fumi-Car | Control de plagas en el Estado de México</title>
+    <title>Fumi-Car | Control de plagas en CDMX y Estado de México</title>
     <meta
       name="description"
-      content="Control profesional de plagas para hogares y negocios en el Área Metropolitana de la Ciudad de México y el Estado de México. Reportes, constancias y portal digital."
+      content="Control profesional de plagas para hogares y negocios en CDMX y el Estado de México. Garantía por escrito, reporte y constancia digital, atención discreta. Cotiza por WhatsApp."
     />
-    <meta name="theme-color" content="#edf4e7" />
-    <meta property="og:title" content="Fumi-Car | El exterminador de plagas" />
+    <meta name="theme-color" content="#06231b" />
+    <link rel="canonical" href="https://fumi-car.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Fumi-Car" />
+    <meta property="og:locale" content="es_MX" />
+    <meta property="og:url" content="https://fumi-car.com/" />
+    <meta
+      property="og:title"
+      content="Fumi-Car | Control profesional de plagas"
+    />
     <meta
       property="og:description"
-      content="Atención en el Área Metropolitana de la Ciudad de México y el Estado de México."
+      content="Atención para hogares y negocios en CDMX y Estado de México, con garantía por escrito y documentación digital."
     />
-    <meta property="og:image" content="assets/images/hero-casa.webp" />
-    <link rel="canonical" href="https://www.fumicar.mx/" />
-    <link rel="stylesheet" href="styles.css" />
+    <meta property="og:image" content="https://fumi-car.com/assets/images/og-cover.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png" />
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preload" as="image" href="assets/images/hero-casa.webp" media="(min-width:701px)" fetchpriority="high" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <link rel="stylesheet" href="base.css?v=2026.10.01" />
+    <link rel="stylesheet" href="home.css?v=2026.10.01" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Fumi-Car",
-        "areaServed": [
-          "Ciudad de México",
-          "Estado de México",
-          "Área Metropolitana del Valle de México"
-        ],
-        "telephone": "+525547117493",
-        "openingHours": "Mo-Sa 08:00-18:00"
+        "@graph": [
+          {
+            "@type": ["LocalBusiness", "PestControlService"],
+            "@id": "https://fumi-car.com/#negocio",
+            "name": "Fumi-Car",
+            "url": "https://fumi-car.com/",
+            "image": "https://fumi-car.com/assets/images/og-cover.jpg",
+            "logo": "https://fumi-car.com/assets/images/logo-mark.webp",
+            "description": "Control profesional de plagas para hogares y negocios con garantía por escrito, reporte y constancia digital.",
+            "telephone": "+525547117493",
+            "areaServed": [
+              { "@type": "AdministrativeArea", "name": "Ciudad de México" },
+              { "@type": "AdministrativeArea", "name": "Estado de México" }
+            ],
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday"
+              ],
+              "opens": "08:00",
+              "closes": "18:00"
+            },
+            "sameAs": ["https://www.facebook.com/fumigacionintegraldeplagas"]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "¿Cuánto tiempo debo estar fuera después de la aplicación?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Entre 2 y 6 horas, según el método, el producto, la ventilación y el tamaño del lugar. La indicación del técnico siempre tiene prioridad."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Cuánto debo ventilar al regresar?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Ventila el espacio durante 30 a 60 minutos al regresar."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Qué formas de pago aceptan?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Tarjeta de crédito o débito, efectivo y transferencia."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Piden anticipo para agendar?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No se requiere anticipo inicial. Si necesitas reprogramar, se aplica un 20% y el servicio express está sujeto a disponibilidad de ruta."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "¿Ofrecen garantía?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Sí, garantía por escrito de 3 meses en el paquete básico y de 6 meses en el paquete especial."
+                }
+              }
+            ]
+          }
+        ]
       }
     </script>
   </head>
   <body>
-    <header>
-      <a class="brand" href="#inicio"
-        ><img src="assets/images/Fumi-Car_logo.png" alt="Fumi-Car" /></a
-      ><button class="menu" aria-label="Abrir menú" aria-expanded="false">
-        <span></span><span></span>
-      </button>
-      <div class="nav-backdrop" aria-hidden="true"></div>
-      <nav aria-label="Navegación principal">
-        <div class="nav-head">
-          <img src="assets/images/Fumi-Car_logo.png" alt="Fumi-Car" /><button
-            class="nav-close"
-            type="button"
-            aria-label="Cerrar menú"
+    <a class="skip" href="#contenido">Saltar al contenido</a>
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <defs>
+        <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
+        <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></symbol>
+        <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+        <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+        <symbol id="i-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+        <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.48 12.89 17 22l-5-3-5 3 1.52-9.11"/></symbol>
+        <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+        <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+        <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+        <symbol id="i-gift" viewBox="0 0 24 24"><path d="M20 12v10H4V12M2 7h20v5H2zM12 22V7M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></symbol>
+        <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V2H6.5A2.5 2.5 0 0 0 4 4.5v15zM20 17v5H6.5a2.5 2.5 0 0 1 0-5"/></symbol>
+        <symbol id="i-home" viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></symbol>
+        <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></symbol>
+        <symbol id="i-store" viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4M9 9v.01M9 12v.01M9 15v.01M9 18v.01"/></symbol>
+        <symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+        <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+        <symbol id="i-wa" viewBox="0 0 32 32"><path d="M16 3a12 12 0 0 0-10.4 18L4 28l7.2-1.5A12 12 0 1 0 16 3Zm0 21.7c-1.7 0-3.3-.4-4.7-1.2l-.3-.2-4.2.9.9-4.1-.2-.3A9.7 9.7 0 1 1 16 24.7Zm5.3-7.2c-.3-.2-1.7-.9-2-.9-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1-1.8-.9-3-1.7-4.2-3.8-.3-.5.3-.5.9-1.6.1-.2.1-.4 0-.6l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.4-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.6c.2.2 2.4 3.7 5.9 5.2.8.4 1.5.6 2 .7.8.3 1.6.2 2.2.1.7-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4Z"/></symbol>
+      </defs>
+    </svg>
+
+    <header class="site-header">
+      <div class="topbar">
+        <div class="wrap">
+          <span><b>Lun a Sáb · 8:00 a 18:00</b> · Atención en CDMX y Estado de México</span>
+          <span
+            ><a href="tel:+525547117493">55 4711 7493</a
+            ><a href="promociones.html">Promociones del mes</a></span
           >
-            ×
-          </button>
         </div>
-        <div class="nav-links">
-          <a href="#servicios">Servicios</a><a href="#programas">Programas</a
-          ><a href="#portal">Portal</a><a href="#galeria">Galería</a
-          ><a href="#guia-cliente">Guía</a
-          ><a href="promociones.html">Promociones</a
-          ><a
-            class="pill"
-            href="https://wa.me/525547117493"
-            target="_blank"
-            rel="noopener"
-            >WhatsApp</a
-          >
-        </div>
-        <div class="nav-meta">
-          <span>Área Metropolitana CDMX y Estado de México</span
-          ><span>8:00 a 18:00</span>
-        </div>
-      </nav>
+      </div>
+      <div class="navbar">
+        <a class="brand" href="#inicio" aria-label="Fumi-Car, inicio">
+          <img src="assets/images/logo-mark-sm.webp" width="48" height="48" alt="" />
+          <span>Fumi-Car<small>Control de plagas</small></span>
+        </a>
+        <button class="menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span>
+        </button>
+        <div class="nav-backdrop"></div>
+        <nav class="nav" aria-label="Navegación principal">
+          <button class="nav-close" type="button" aria-label="Cerrar menú">×</button>
+          <div class="nav-links">
+            <a href="#servicios">Servicios</a>
+            <a href="#paquetes">Paquetes</a>
+            <a href="#portal">Portal</a>
+            <a href="#trabajo">Trabajo real</a>
+            <a href="guia-cliente.html">Guía</a>
+            <a href="promociones.html">Promociones</a>
+            <a href="#faq">Preguntas</a>
+            <a class="btn btn-wa" href="https://wa.me/525547117493?text=Hola%20Fumi-Car%2C%20quiero%20solicitar%20un%20servicio" target="_blank" rel="noopener">
+              <svg><use href="#i-wa" /></svg>Cotizar
+            </a>
+          </div>
+        </nav>
+      </div>
     </header>
-    <main>
-      <section class="hero" id="inicio">
-        <article class="slide active">
-          <picture
-            ><source
-              media="(max-width:700px)"
-              srcset="assets/images/hero-casa-mobile.webp" />
-            <img
-              src="assets/images/hero-casa.webp"
-              alt="Casa protegida en el Estado de México"
-          /></picture>
-          <div class="shade"></div>
-          <div class="hero-copy">
-            <small>CONTROL PROFESIONAL · ESTADO DE MÉXICO</small>
-            <h1>Tu hogar, protegido con atención que se nota.</h1>
-            <p>
-              Soluciones claras, discretas y respaldadas con documentación
-              digital.
-            </p>
-            <a class="btn" href="#contacto">Solicitar servicio</a>
-          </div>
-        </article>
-        <article class="slide">
-          <picture
-            ><source
-              media="(max-width:700px)"
-              srcset="assets/images/hero-tecnico-mobile.webp" />
-            <img
-              src="assets/images/hero-tecnico.webp"
-              alt="Aplicación profesional"
-          /></picture>
-          <div class="shade"></div>
-          <div class="hero-copy">
-            <small>INSPECCIÓN · TRATAMIENTO · SEGUIMIENTO</small>
-            <h2>Atendemos el origen, no solo lo visible.</h2>
-            <p>Revisamos puntos críticos y recomendamos acciones concretas.</p>
-            <a class="btn" href="#servicios">Ver soluciones</a>
-          </div>
-        </article>
-        <article class="slide">
-          <picture
-            ><source
-              media="(max-width:700px)"
-              srcset="assets/images/hero-portal-mobile.webp" />
-            <img
-              src="assets/images/hero-portal.webp"
-              alt="Consulta digital del servicio"
-          /></picture>
-          <div class="shade"></div>
-          <div class="hero-copy">
-            <small>RESPALDO DIGITAL CON PESTOS</small>
-            <h2>Tus documentos cuando los necesites.</h2>
-            <p>Reportes, constancias, planos, mapas de calor y solicitudes.</p>
-            <a class="btn" href="#portal">Conocer el portal</a>
-          </div>
-        </article>
-        <div class="dots">
-          <button class="on" aria-label="Escena 1"></button
-          ><button aria-label="Escena 2"></button
-          ><button aria-label="Escena 3"></button>
-        </div>
-        <div class="proof">
-          <span><b>8:00 a 18:00</b>Horario de atención</span
-          ><span><b>Cobertura metropolitana</b>CDMX y Estado de México</span
-          ><span><b>55 4711 7493</b>Contacto directo</span>
-        </div>
-      </section>
-      <section class="intro reveal">
-        <small>SOLUCIONES PARA ESPACIOS REALES</small>
-        <h2>Protección cómoda para la rutina de tu hogar.</h2>
-        <p>
-          Adaptamos la atención al espacio, la actividad detectada y el
-          seguimiento que necesitas.
-        </p>
-      </section>
-      <section class="cards" id="servicios">
-        <article class="reveal card-home">
-          <img
-            class="card-brand"
-            src="assets/images/Fumi-Car_logo.png"
-            alt=""
-            aria-hidden="true"
-          />
-          <i class="card-line"></i><b>01</b>
-          <h3>Casa o departamento</h3>
-          <p>Inspección de cocina, baños, patios, accesos y puntos críticos.</p>
-        </article>
-        <article class="reveal card-outdoor">
-          <img
-            class="card-brand"
-            src="assets/images/Fumi-Car_logo.png"
-            alt=""
-            aria-hidden="true"
-          />
-          <i class="card-line"></i><b>02</b>
-          <h3>Patios y exteriores</h3>
-          <p>Tratamientos focalizados para perímetros, jardines y cocheras.</p>
-        </article>
-        <article class="reveal card-business">
-          <img
-            class="card-brand"
-            src="assets/images/Fumi-Car_logo.png"
-            alt=""
-            aria-hidden="true"
-          />
-          <i class="card-line"></i><b>03</b>
-          <h3>Negocios</h3>
-          <p>Atención discreta, evidencia y documentación organizada.</p>
-        </article>
-      </section>
-      <section class="feature">
-        <img
-          class="reveal"
-          src="assets/images/servicio-cocina.webp"
-          alt="Inspección residencial"
-        />
-        <div class="reveal">
-          <small>RESIDENCIAL, CLARO Y SIN COMPLICACIONES</small>
-          <h2>Una visita preparada alrededor de tu espacio.</h2>
-          <p>
-            Conversamos, inspeccionamos áreas clave y definimos una estrategia
-            adecuada. Al finalizar recibes indicaciones, evidencia y
-            documentación.
-          </p>
-          <ul>
-            <li>Evaluación de puntos críticos</li>
-            <li>Aplicación focalizada</li>
-            <li>Recomendaciones posteriores</li>
-            <li>Reporte y constancia</li>
-          </ul>
-        </div>
-      </section>
-      <section class="programs" id="programas">
-        <div class="reveal">
-          <small>UNA SOLUCIÓN PARA CADA RITMO</small>
-          <h2>Servicio ocasional o seguimiento frecuente.</h2>
-        </div>
-        <div class="program-grid">
-          <article class="reveal">
-            <h3>Resolver un caso</h3>
-            <p>Atención puntual cuando detectaste actividad en casa.</p>
-            <span>Inspección · Servicio · Reporte · Constancia</span>
+
+    <main id="contenido">
+      <!-- HERO -->
+      <section class="hero" id="inicio" aria-roledescription="carrusel">
+        <div class="hero-slides">
+          <article class="slide active">
+            <picture>
+              <source media="(max-width:700px)" srcset="assets/images/hero-casa-mobile.webp" />
+              <img src="assets/images/hero-casa.webp" width="1536" height="1024" alt="Técnico de Fumi-Car inspeccionando una cocina frente a la clienta" fetchpriority="high" />
+            </picture>
+            <div class="hero-copy">
+              <span class="pill">Control profesional · CDMX y Edomex</span>
+              <h1>Tu hogar, protegido con atención que se nota.</h1>
+              <p>Soluciones claras, discretas y respaldadas con documentación digital.</p>
+              <div class="hero-actions">
+                <a class="btn" href="#contacto">Solicitar servicio</a>
+                <a class="btn btn-ghost" href="#servicios">Ver soluciones</a>
+              </div>
+            </div>
           </article>
-          <article class="reveal">
-            <h3>Visitas frecuentes</h3>
-            <p>Historial, visitas programadas y acceso privado.</p>
-            <span>Portal · Documentos · Planos · Solicitudes</span>
+          <article class="slide">
+            <picture>
+              <source media="(max-width:700px)" srcset="assets/images/hero-tecnico-mobile.webp" />
+              <img src="assets/images/hero-tecnico.webp" width="1536" height="1024" alt="Técnico aplicando un tratamiento focalizado en el perímetro de un jardín" loading="lazy" />
+            </picture>
+            <div class="hero-copy">
+              <span class="pill">Inspección · Tratamiento · Seguimiento</span>
+              <h2>Atendemos el origen, no solo lo visible.</h2>
+              <p>Revisamos puntos críticos y recomendamos acciones concretas.</p>
+              <div class="hero-actions">
+                <a class="btn" href="#servicios">Ver soluciones</a>
+                <a class="btn btn-ghost" href="guia-cliente.html#proceso">Cómo trabajamos</a>
+              </div>
+            </div>
+          </article>
+          <article class="slide">
+            <picture>
+              <source media="(max-width:700px)" srcset="assets/images/jardin-casa-mobile.webp" />
+              <img src="assets/images/jardin-casa.webp" width="1536" height="1024" alt="Casa con jardín atendida por Fumi-Car" loading="lazy" />
+            </picture>
+            <div class="hero-copy">
+              <span class="pill">Respaldo digital con PestOS</span>
+              <h2>Tus documentos cuando los necesites.</h2>
+              <p>Reportes, constancias, planos, mapas de calor y solicitudes.</p>
+              <div class="hero-actions">
+                <a class="btn" href="#portal">Conocer el portal</a>
+                <a class="btn btn-ghost" href="#contacto">Solicitar servicio</a>
+              </div>
+            </div>
           </article>
         </div>
-      </section>
-      <section class="route route-sand reveal">
-        <div>
-          <small>ÁREA METROPOLITANA</small>
-          <h2>CDMX y Estado de México, cerca de ti.</h2>
-          <p>
-            Atendemos hogares y negocios en distintos municipios y alcaldías del
-            Área Metropolitana.
-          </p>
-        </div>
-        <div class="map">
-          <iframe
-            src="https://www.google.com/maps?q=Estado%20de%20M%C3%A9xico&z=8&output=embed"
-            title="Mapa de cobertura de Fumi-Car en el Estado de México y la Ciudad de México"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-      </section>
-      <section class="portal" id="portal">
-        <div class="reveal">
-          <small>TECNOLOGÍA QUE ACOMPAÑA EL SERVICIO</small>
-          <h2>Tu portal disponible a cualquier hora.</h2>
-          <p>
-            Clientes frecuentes consultan historial, descargan documentos y
-            solicitan atención desde un acceso privado impulsado por PestOS.
-          </p>
-          <div class="chips" role="tablist" aria-label="Funciones del portal">
-            <button
-              class="active"
-              data-portal="reports"
-              role="tab"
-              aria-selected="true"
-            >
-              Reportes</button
-            ><button data-portal="certs" role="tab" aria-selected="false">
-              Constancias</button
-            ><button data-portal="maps" role="tab" aria-selected="false">
-              Planos</button
-            ><button data-portal="requests" role="tab" aria-selected="false">
-              Solicitudes
-            </button>
-          </div>
-          <div class="portal-progress"><i></i></div>
-        </div>
-        <div class="phone reveal">
-          <div class="screen">
-            <b>Portal Fumi-Car</b>
-            <section class="portal-screen active" data-screen="reports">
-              <small>ÚLTIMO SERVICIO</small>
-              <h3>Control preventivo</h3>
-              <div class="portal-row">
-                Reporte de servicio <em>Disponible</em>
-              </div>
-              <div class="portal-row">
-                Evidencia fotográfica <em>4 archivos</em>
-              </div>
-              <div class="bars"><i></i><i></i><i></i><i></i></div>
-            </section>
-            <section class="portal-screen" data-screen="certs">
-              <small>DOCUMENTACIÓN</small>
-              <h3>Constancias digitales</h3>
-              <div class="certificate">
-                <b>Servicio completado</b>
-                <p>Documento listo para consultar y descargar.</p>
-              </div>
-              <div class="portal-row">
-                Constancia de servicio <em>Lista</em>
-              </div>
-            </section>
-            <section class="portal-screen" data-screen="maps">
-              <small>MONITOREO</small>
-              <h3>Plano y actividad</h3>
-              <div class="mini-map"><i></i><i></i><i></i><i></i></div>
-              <div class="heat"><span></span><span></span><span></span></div>
-            </section>
-            <section class="portal-screen" data-screen="requests">
-              <small>ATENCIÓN</small>
-              <h3>Nueva solicitud</h3>
-              <div class="fake-field">Tipo de servicio</div>
-              <div class="fake-field tall">Describe lo que observaste</div>
-              <div class="fake-submit">Enviar solicitud</div>
-            </section>
+        <div class="hero-shade"></div>
+        <div class="hero-ui wrap">
+          <div class="dots" role="tablist" aria-label="Escenas del carrusel">
+            <button class="on" type="button" role="tab" aria-selected="true" aria-label="Escena 1"><i></i></button>
+            <button type="button" role="tab" aria-selected="false" aria-label="Escena 2"><i></i></button>
+            <button type="button" role="tab" aria-selected="false" aria-label="Escena 3"><i></i></button>
           </div>
         </div>
-      </section>
-      <section class="gallery-section" id="galeria">
-        <div class="reveal">
-          <small>TRABAJO REAL DE FUMI-CAR</small>
-          <h2>Experiencia en distintos espacios.</h2>
-          <p>Evidencias reales de nuestro trabajo y compromiso en el campo.</p>
-        </div>
-        <article class="featured-video reveal">
-          <div class="featured-video-copy">
-            <small>EXPERIENCIA FUMI-CAR</small>
-            <h3>Contrato entregado, equipo demostrado.</h3>
-            <p>
-              Conoce cómo compartimos la documentación del servicio y mostramos
-              el uso correcto del equipo durante la atención.
-            </p>
+        <aside class="hero-card" aria-label="Contacto rápido">
+          <img src="assets/images/logo-mark-sm.webp" width="64" height="64" alt="" />
+          <div>
+            <b>Atención directa</b>
+            <span>Te respondemos por WhatsApp en horario de servicio.</span>
           </div>
-          <div class="featured-video-frame">
-            <video
-              controls
-              preload="metadata"
-              playsinline
-              poster="assets/images/equipo-fumicar.webp"
-              aria-label="Entrega del contrato y demostración del uso del equipo Fumi-Car"
-            >
-              <source src="assets/images/video_fumi-car.mp4" type="video/mp4" />
-              Tu navegador no puede reproducir este video.
-            </video>
-          </div>
-        </article>
-        <div class="gallery">
-          <button
-            class="reveal gallery-card"
-            data-src="assets/images/trabajo-tecnico.webp"
-          >
-            <img
-              src="assets/images/trabajo-tecnico.webp"
-              alt="Inspección técnica"
-            /><span class="gallery-scan"></span
-            ><strong>Inspección técnica</strong></button
-          ><button
-            class="reveal gallery-card"
-            data-src="assets/images/nebulizacion-almacen.webp"
-          >
-            <img
-              src="assets/images/nebulizacion-almacen.webp"
-              alt="Nebulización en almacén"
-            /><span class="gallery-scan"></span
-            ><strong>Nebulización en almacén</strong></button
-          ><button
-            class="reveal gallery-card"
-            data-src="assets/images/nebulizacion-local.webp"
-          >
-            <img
-              src="assets/images/nebulizacion-local.webp"
-              alt="Atención en local"
-            /><span class="gallery-scan"></span
-            ><strong>Atención en local</strong></button
-          ><button
-            class="reveal gallery-card"
-            data-src="assets/images/equipo-fumicar.webp"
-          >
-            <img
-              src="assets/images/equipo-fumicar.webp"
-              alt="Equipo Fumi-Car"
-            /><span class="gallery-scan"></span
-            ><strong>Equipo Fumi-Car</strong></button
-          ><button
-            class="reveal gallery-card"
-            data-src="assets/images/aplicacion-motorizada.webp"
-          >
-            <img
-              src="assets/images/aplicacion-motorizada.webp"
-              alt="Aplicación especializada"
-            /><span class="gallery-scan"></span
-            ><strong>Aplicación especializada</strong></button
-          ><button
-            class="reveal gallery-card"
-            data-src="assets/images/servicio-almacen.webp"
-          >
-            <img
-              src="assets/images/servicio-almacen.webp"
-              alt="Cobertura de espacios"
-            /><span class="gallery-scan"></span
-            ><strong>Cobertura de espacios</strong>
-          </button>
-        </div>
-        <div class="videos">
-          <a
-            href="https://www.facebook.com/share/v/19NympCkic/?mibextid=wwXIfr"
-            target="_blank"
-            rel="noopener"
-            ><img
-              src="assets/images/aplicacion-motorizada.webp"
-              alt="Demostración de fumigación de cucarachas"
-            /><span>▶</span>
-            <div>
-              <h3>Fumigación de cucarachas</h3>
-              <p>Ver video en Facebook</p>
-            </div></a
-          ><a
-            href="https://www.facebook.com/share/v/198Tkndd83/?mibextid=wwXIfr"
-            target="_blank"
-            rel="noopener"
-            ><img
-              src="assets/images/nebulizacion-local.webp"
-              alt="Demostración de fumigación de chinches"
-            /><span>▶</span>
-            <div>
-              <h3>Fumigación de chinches</h3>
-              <p>Ver video en Facebook</p>
-            </div></a
-          >
+          <a class="btn btn-wa btn-sm" href="https://wa.me/525547117493?text=Hola%20Fumi-Car%2C%20quiero%20solicitar%20un%20servicio" target="_blank" rel="noopener"><svg><use href="#i-wa" /></svg>Escribir</a>
+        </aside>
+        <div class="proof wrap">
+          <div><svg class="ic"><use href="#i-clock" /></svg><span><b>8:00 a 18:00</b>Horario de atención</span></div>
+          <div><svg class="ic"><use href="#i-pin" /></svg><span><b>Cobertura metropolitana</b>CDMX y Estado de México</span></div>
+          <div><svg class="ic"><use href="#i-phone" /></svg><span><b>55 4711 7493</b>Contacto directo</span></div>
         </div>
       </section>
 
-      <section class="client-guide reveal" id="guia-cliente">
-        <div class="client-guide-copy">
-          <small>ANTES, DURANTE Y DESPUÉS</small>
-          <h2>Todo tu servicio, explicado con claridad.</h2>
-          <p>
-            Conoce el proceso, los paquetes, los cuidados y los requisitos. Al
-            final encontrarás el reto interactivo Fumi-Car.
-          </p>
+      <!-- CONFIANZA -->
+      <section class="trust" aria-label="Lo que incluye cada servicio">
+        <div class="trust-track">
+          <span><svg class="ic"><use href="#i-shield" /></svg>Garantía por escrito</span>
+          <span><svg class="ic"><use href="#i-file" /></svg>Reporte y constancia digital</span>
+          <span><svg class="ic"><use href="#i-lock" /></svg>Discreción total</span>
+          <span><svg class="ic"><use href="#i-award" /></svg>Personal confiable</span>
+          <span><svg class="ic"><use href="#i-search" /></svg>Inspección de puntos críticos</span>
+          <span><svg class="ic"><use href="#i-pin" /></svg>Vehículos sin emblemas</span>
+          <span><svg class="ic"><use href="#i-shield" /></svg>Garantía por escrito</span>
+          <span><svg class="ic"><use href="#i-file" /></svg>Reporte y constancia digital</span>
+          <span><svg class="ic"><use href="#i-lock" /></svg>Discreción total</span>
+          <span><svg class="ic"><use href="#i-award" /></svg>Personal confiable</span>
+          <span><svg class="ic"><use href="#i-search" /></svg>Inspección de puntos críticos</span>
+          <span><svg class="ic"><use href="#i-pin" /></svg>Vehículos sin emblemas</span>
         </div>
-        <div class="client-guide-mascot" aria-hidden="true">
-          <img src="assets/images/logo-fumicar-oficial.webp" alt="" />
-        </div>
-        <a class="guide-launch" href="guia-cliente.html">
-          <span class="guide-icon">◎</span>
-          <span
-            ><b>Abrir guía del cliente</b
-            ><small>Información útil + juego de 30 segundos →</small></span
-          >
-        </a>
       </section>
-      <section class="contact" id="contacto">
-        <div>
-          <small>SOLICITA ATENCIÓN</small>
-          <h2>Cuéntanos qué observaste.</h2>
-          <p>
-            Área Metropolitana CDMX y Estado de México. Horario de 8:00 a 18:00.
-          </p>
-          <a href="tel:+525547117493">55 4711 7493</a>
-          <div class="contact-points">
-            <span>Respuesta directa por WhatsApp</span
-            ><span>Atención residencial y comercial</span
-            ><span>Cobertura en CDMX y Estado de México</span>
+
+      <!-- SERVICIOS -->
+      <section class="section" id="servicios">
+        <div class="wrap">
+          <div class="head-center reveal">
+            <span class="eyebrow">Soluciones para espacios reales</span>
+            <h2 class="title">Protección cómoda para la rutina de tu hogar.</h2>
+            <p class="lead">Adaptamos la atención al espacio, la actividad detectada y el seguimiento que necesitas.</p>
+          </div>
+          <div class="services">
+            <article class="svc reveal">
+              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=75" width="800" height="560" loading="lazy" alt="Sala moderna de una casa" />
+              <div class="svc-body">
+                <span class="svc-num">01</span>
+                <svg class="ic"><use href="#i-home" /></svg>
+                <h3>Casa o departamento</h3>
+                <p>Inspección de cocina, baños, patios, accesos y puntos críticos.</p>
+              </div>
+            </article>
+            <article class="svc reveal" style="--d: 0.1s">
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=75" width="800" height="560" loading="lazy" alt="Casa moderna con jardín y exteriores" />
+              <div class="svc-body">
+                <span class="svc-num">02</span>
+                <svg class="ic"><use href="#i-leaf" /></svg>
+                <h3>Patios y exteriores</h3>
+                <p>Tratamientos focalizados para perímetros, jardines y cocheras.</p>
+              </div>
+            </article>
+            <article class="svc reveal" style="--d: 0.2s">
+              <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=800&q=75" width="800" height="560" loading="lazy" alt="Restaurante, un negocio atendido por Fumi-Car" />
+              <div class="svc-body">
+                <span class="svc-num">03</span>
+                <svg class="ic"><use href="#i-store" /></svg>
+                <h3>Negocios</h3>
+                <p>Atención discreta, evidencia y documentación organizada.</p>
+              </div>
+            </article>
           </div>
         </div>
-        <form id="form" novalidate>
-          <label
-            >Nombre<input
-              name="n"
-              required
-              minlength="2"
-              maxlength="60"
-              autocomplete="name"
-              placeholder="Tu nombre" /><small class="error"></small></label
-          ><label
-            >Teléfono<input
-              name="t"
-              required
-              inputmode="numeric"
-              autocomplete="tel"
-              maxlength="10"
-              placeholder="10 dígitos" /><small class="error"></small></label
-          ><label
-            >Espacio<select name="e" required>
-              <option value="">Selecciona</option>
-              <option>Casa</option>
-              <option>Departamento</option>
-              <option>Negocio</option></select
-            ><small class="error"></small></label
-          ><label
-            >Alcaldía o municipio<select name="z" id="zone-select" required>
-              <option value="">Selecciona tu alcaldía o municipio</option>
-              <optgroup label="Estado de México">
-                <option>Ixtapaluca</option>
-                <option>Chalco</option>
-                <option>Valle de Chalco Solidaridad</option>
-                <option>La Paz</option>
-                <option>Nezahualcóyotl</option>
-                <option>Chimalhuacán</option>
-                <option>Chicoloapan</option>
-                <option>Texcoco</option>
-                <option>Ecatepec de Morelos</option>
-                <option>Los Reyes Acaquilpan</option>
-                <option>Coacalco de Berriozábal</option>
-                <option>Cocotitlán</option>
-                <option>Tezoyuca</option>
-                <option>Otro municipio del Estado de México</option>
-              </optgroup>
-              <optgroup label="Ciudad de México">
-                <option>Álvaro Obregón</option>
-                <option>Azcapotzalco</option>
-                <option>Benito Juárez</option>
-                <option>Coyoacán</option>
-                <option>Cuajimalpa de Morelos</option>
-                <option>Cuauhtémoc</option>
-                <option>Gustavo A. Madero</option>
-                <option>Iztacalco</option>
-                <option>Iztapalapa</option>
-                <option>La Magdalena Contreras</option>
-                <option>Miguel Hidalgo</option>
-                <option>Milpa Alta</option>
-                <option>Tláhuac</option>
-                <option>Tlalpan</option>
-                <option>Venustiano Carranza</option>
-                <option>Xochimilco</option>
-              </optgroup>
-              <option value="__otro__">Otro municipio o delegación</option>
-            </select>
-            <input
-              id="zone-other"
-              class="zone-other"
-              name="zone_other"
-              maxlength="80"
-              placeholder="Escribe tu municipio o delegación"
-              hidden /><small class="error"></small></label
-          ><label class="full"
-            >Mensaje<textarea
-              name="m"
-              required
-              minlength="10"
-              maxlength="500"
-              rows="4"
-              placeholder="Describe brevemente lo que observaste"
-            ></textarea
-            ><small class="error"></small></label
-          ><button class="btn full" type="submit">Continuar en WhatsApp</button>
-          <p class="privacy full">
-            Los datos no se almacenan. El formulario prepara tu mensaje para
-            WhatsApp.
-          </p>
-        </form>
       </section>
-    </main>
-    <footer>
-      <div class="footer-brand">
-        <img src="assets/images/Fumi-Car_logo.png" alt="Fumi-Car" />
-        <div>
-          <b>Fumi-Car</b>
-          <p>
-            Control profesional de plagas para hogares y negocios, con
-            documentación y seguimiento digital.
+
+      <!-- VISITA + CIFRAS -->
+      <section class="section visit">
+        <div class="wrap visit-grid">
+          <div class="visit-media reveal">
+            <img src="assets/images/tecnico-tablet.webp" width="1536" height="1024" loading="lazy" alt="Técnico de Fumi-Car registrando una inspección en tableta" />
+            <div class="visit-badge">
+              <img src="assets/images/logo-mark-sm.webp" width="56" height="56" alt="" />
+              <span><b>Inspección registrada</b>Evidencia y reporte digital</span>
+            </div>
+          </div>
+          <div class="reveal">
+            <span class="eyebrow">Residencial, claro y sin complicaciones</span>
+            <h2 class="title">Una visita preparada alrededor de tu espacio.</h2>
+            <p class="lead">Conversamos, inspeccionamos áreas clave y definimos una estrategia adecuada. Al finalizar recibes indicaciones, evidencia y documentación.</p>
+            <ul class="checks">
+              <li><svg class="ic"><use href="#i-check" /></svg>Evaluación de puntos críticos</li>
+              <li><svg class="ic"><use href="#i-check" /></svg>Aplicación focalizada</li>
+              <li><svg class="ic"><use href="#i-check" /></svg>Recomendaciones posteriores</li>
+              <li><svg class="ic"><use href="#i-check" /></svg>Reporte y constancia</li>
+            </ul>
+            <a class="link-arrow" href="guia-cliente.html#proceso">Conoce el proceso completo</a>
+          </div>
+        </div>
+        <div class="wrap stats">
+          <div class="reveal"><b><span data-count="29">29</span></b><span>alcaldías y municipios con cobertura directa</span></div>
+          <div class="reveal" style="--d: 0.08s"><b>0<small>$</small></b><span>de anticipo inicial para agendar</span></div>
+          <div class="reveal" style="--d: 0.16s"><b>6<small> meses</small></b><span>de garantía escrita en el paquete especial</span></div>
+          <div class="reveal" style="--d: 0.24s"><b>6<small> días</small></b><span>a la semana de atención, de 8:00 a 18:00</span></div>
+        </div>
+      </section>
+
+      <!-- PAQUETES -->
+      <section class="section packs-sec" id="paquetes">
+        <div class="wrap">
+          <div class="packs-head">
+            <div class="reveal">
+              <span class="eyebrow light">Una solución para cada ritmo</span>
+              <h2 class="title">Servicio ocasional o seguimiento frecuente.</h2>
+            </div>
+            <div class="programs reveal">
+              <article>
+                <svg class="ic"><use href="#i-search" /></svg>
+                <h3>Resolver un caso</h3>
+                <p>Atención puntual cuando detectaste actividad en casa.</p>
+                <span>Inspección · Servicio · Reporte · Constancia</span>
+              </article>
+              <article>
+                <svg class="ic"><use href="#i-file" /></svg>
+                <h3>Visitas frecuentes</h3>
+                <p>Historial, visitas programadas y acceso privado.</p>
+                <span>Portal · Documentos · Planos · Solicitudes</span>
+              </article>
+            </div>
+          </div>
+          <div class="pack-grid">
+            <article class="pack reveal">
+              <span class="tag">01 · Económico</span>
+              <h3>Aplicación y valoración</h3>
+              <ul>
+                <li><svg class="ic"><use href="#i-check" /></svg>Valoración profesional</li>
+                <li><svg class="ic"><use href="#i-check" /></svg>Aplicación por aspersión</li>
+              </ul>
+              <a class="btn btn-sm" href="https://wa.me/525547117493?text=Me%20interesa%20el%20Paquete%201" target="_blank" rel="noopener">Elegir paquete</a>
+            </article>
+            <article class="pack featured reveal" style="--d: 0.1s">
+              <span class="ribbon">Más elegido</span>
+              <span class="tag">02 · Básico</span>
+              <h3>Áreas afectadas</h3>
+              <ul>
+                <li><svg class="ic"><use href="#i-check" /></svg>Aspersión y termonebulización</li>
+                <li><svg class="ic"><use href="#i-check" /></svg>Garantía escrita de 3 meses</li>
+              </ul>
+              <a class="btn btn-sm" href="https://wa.me/525547117493?text=Me%20interesa%20el%20Paquete%202" target="_blank" rel="noopener">Elegir paquete</a>
+            </article>
+            <article class="pack reveal" style="--d: 0.2s">
+              <span class="tag">03 · Especial</span>
+              <h3>Servicio de mayor cobertura</h3>
+              <ul>
+                <li><svg class="ic"><use href="#i-check" /></svg>Aplicación focalizada</li>
+                <li><svg class="ic"><use href="#i-check" /></svg>Garantía escrita de 6 meses</li>
+              </ul>
+              <a class="btn btn-sm" href="https://wa.me/525547117493?text=Me%20interesa%20el%20Paquete%203" target="_blank" rel="noopener">Elegir paquete</a>
+            </article>
+          </div>
+          <p class="packs-note reveal">
+            ¿Quieres ver pagos, cuidados y requisitos antes de decidir?
+            <a href="guia-cliente.html#paquetes">Abre la guía del cliente →</a>
           </p>
         </div>
+      </section>
+
+      <!-- COBERTURA -->
+      <section class="section coverage" id="cobertura">
+        <div class="wrap coverage-grid">
+          <div class="reveal">
+            <span class="eyebrow">Área metropolitana</span>
+            <h2 class="title">CDMX y Estado de México, cerca de ti.</h2>
+            <p class="lead">Atendemos hogares y negocios en distintos municipios y alcaldías del Área Metropolitana.</p>
+            <div class="zones">
+              <h3>Estado de México</h3>
+              <p>
+                <span>Ixtapaluca</span><span>Chalco</span><span>Valle de Chalco</span><span>La Paz</span><span>Nezahualcóyotl</span><span>Chimalhuacán</span><span>Chicoloapan</span><span>Texcoco</span><span>Ecatepec</span><span>Los Reyes Acaquilpan</span><span>Coacalco</span><span>Cocotitlán</span><span>Tezoyuca</span>
+              </p>
+              <h3>Ciudad de México</h3>
+              <p>
+                <span>Álvaro Obregón</span><span>Azcapotzalco</span><span>Benito Juárez</span><span>Coyoacán</span><span>Cuajimalpa</span><span>Cuauhtémoc</span><span>Gustavo A. Madero</span><span>Iztacalco</span><span>Iztapalapa</span><span>Magdalena Contreras</span><span>Miguel Hidalgo</span><span>Milpa Alta</span><span>Tláhuac</span><span>Tlalpan</span><span>Venustiano Carranza</span><span>Xochimilco</span>
+              </p>
+              <small>¿Tu zona no aparece? Escríbenos, también atendemos otros municipios.</small>
+            </div>
+          </div>
+          <div class="map reveal" style="--d: 0.12s">
+            <iframe
+              src="https://www.google.com/maps?q=Estado%20de%20M%C3%A9xico&z=8&output=embed"
+              title="Mapa de cobertura de Fumi-Car en el Estado de México y la Ciudad de México"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- PORTAL -->
+      <section class="section portal" id="portal">
+        <div class="wrap portal-grid on-dark">
+          <div class="reveal">
+            <span class="eyebrow">Tecnología que acompaña el servicio</span>
+            <h2 class="title">Tu portal disponible a cualquier hora.</h2>
+            <p class="lead">Clientes frecuentes consultan historial, descargan documentos y solicitan atención desde un acceso privado impulsado por PestOS.</p>
+            <div class="chips" role="tablist" aria-label="Funciones del portal">
+              <button class="active" data-portal="reports" role="tab" aria-selected="true">Reportes</button>
+              <button data-portal="certs" role="tab" aria-selected="false">Constancias</button>
+              <button data-portal="maps" role="tab" aria-selected="false">Planos</button>
+              <button data-portal="requests" role="tab" aria-selected="false">Solicitudes</button>
+            </div>
+            <div class="portal-progress"><i></i></div>
+          </div>
+          <div class="phone reveal" style="--d: 0.12s">
+            <div class="screen">
+              <b class="screen-title"><img src="assets/images/logo-mark-sm.webp" width="26" height="26" alt="" />Portal Fumi-Car</b>
+              <section class="portal-screen active" data-screen="reports">
+                <small>ÚLTIMO SERVICIO</small>
+                <h3>Control preventivo</h3>
+                <div class="portal-row">Reporte de servicio <em>Disponible</em></div>
+                <div class="portal-row">Evidencia fotográfica <em>4 archivos</em></div>
+                <div class="bars"><i></i><i></i><i></i><i></i></div>
+              </section>
+              <section class="portal-screen" data-screen="certs">
+                <small>DOCUMENTACIÓN</small>
+                <h3>Constancias digitales</h3>
+                <div class="certificate">
+                  <b>Servicio completado</b>
+                  <p>Documento listo para consultar y descargar.</p>
+                </div>
+                <div class="portal-row">Constancia de servicio <em>Lista</em></div>
+              </section>
+              <section class="portal-screen" data-screen="maps">
+                <small>MONITOREO</small>
+                <h3>Plano y actividad</h3>
+                <div class="mini-map"><i></i><i></i><i></i><i></i></div>
+                <div class="heat"><span></span><span></span><span></span></div>
+              </section>
+              <section class="portal-screen" data-screen="requests">
+                <small>ATENCIÓN</small>
+                <h3>Nueva solicitud</h3>
+                <div class="fake-field">Tipo de servicio</div>
+                <div class="fake-field tall">Describe lo que observaste</div>
+                <div class="fake-submit">Enviar solicitud</div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TRABAJO REAL -->
+      <section class="section" id="trabajo">
+        <div class="wrap">
+          <div class="head-center reveal">
+            <span class="eyebrow">Trabajo real de Fumi-Car</span>
+            <h2 class="title">Experiencia en distintos espacios.</h2>
+            <p class="lead">Evidencias reales de nuestro trabajo y compromiso en el campo.</p>
+          </div>
+          <div class="work-grid">
+            <article class="video-card reveal">
+              <video controls preload="none" playsinline poster="assets/images/poster.jpg" aria-label="Entrega del contrato y demostración del uso del equipo Fumi-Car" width="480" height="848">
+                <source src="assets/images/video-fumicar.mp4" type="video/mp4" />
+                Tu navegador no puede reproducir este video.
+              </video>
+            </article>
+            <div class="work-side">
+              <div class="reveal">
+                <span class="eyebrow">Experiencia Fumi-Car</span>
+                <h3>Contrato entregado, equipo demostrado.</h3>
+                <p class="lead">Conoce cómo compartimos la documentación del servicio y mostramos el uso correcto del equipo durante la atención.</p>
+              </div>
+              <div class="gallery">
+                <button class="gallery-card reveal" data-src="assets/images/trabajo-tecnico.webp"><img src="assets/images/trabajo-tecnico.webp" width="297" height="291" loading="lazy" alt="Inspección técnica" /><strong>Inspección técnica</strong></button>
+                <button class="gallery-card reveal" data-src="assets/images/nebulizacion-almacen.webp"><img src="assets/images/nebulizacion-almacen.webp" width="297" height="291" loading="lazy" alt="Nebulización en almacén" /><strong>Nebulización en almacén</strong></button>
+                <button class="gallery-card reveal" data-src="assets/images/nebulizacion-local.webp"><img src="assets/images/nebulizacion-local.webp" width="297" height="291" loading="lazy" alt="Atención en local comercial" /><strong>Atención en local</strong></button>
+                <button class="gallery-card reveal" data-src="assets/images/equipo-fumicar.webp"><img src="assets/images/equipo-fumicar.webp" width="297" height="291" loading="lazy" alt="Equipo Fumi-Car" /><strong>Equipo Fumi-Car</strong></button>
+                <button class="gallery-card reveal" data-src="assets/images/aplicacion-motorizada.webp"><img src="assets/images/aplicacion-motorizada.webp" width="297" height="291" loading="lazy" alt="Aplicación especializada con equipo motorizado" /><strong>Aplicación especializada</strong></button>
+                <button class="gallery-card reveal" data-src="assets/images/servicio-almacen.webp"><img src="assets/images/servicio-almacen.webp" width="297" height="291" loading="lazy" alt="Cobertura de espacios amplios" /><strong>Cobertura de espacios</strong></button>
+              </div>
+            </div>
+          </div>
+          <div class="fb-videos">
+            <a class="reveal" href="https://www.facebook.com/share/v/19NympCkic/?mibextid=wwXIfr" target="_blank" rel="noopener">
+              <img src="assets/images/aplicacion-motorizada.webp" width="297" height="291" loading="lazy" alt="Demostración de fumigación de cucarachas" />
+              <span class="play">▶</span>
+              <div><h3>Fumigación de cucarachas</h3><p>Ver video en Facebook ↗</p></div>
+            </a>
+            <a class="reveal" style="--d: 0.1s" href="https://www.facebook.com/share/v/198Tkndd83/?mibextid=wwXIfr" target="_blank" rel="noopener">
+              <img src="assets/images/nebulizacion-local.webp" width="297" height="291" loading="lazy" alt="Demostración de fumigación de chinches" />
+              <span class="play">▶</span>
+              <div><h3>Fumigación de chinches</h3><p>Ver video en Facebook ↗</p></div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROMO + GUIA -->
+      <section class="section pg" id="guia">
+        <div class="wrap pg-grid">
+          <a class="pg-card promo reveal" href="promociones.html">
+            <span class="pill-y"><svg class="ic"><use href="#i-gift" /></svg>Promociones del mes</span>
+            <h3>Tu servicio puede traer una sorpresa enorme.</h3>
+            <p>Contrata, recibe tu reporte en PestOS y participa por descuentos, servicios gratis o hasta $1,000 en efectivo.</p>
+            <span class="link-arrow">Quiero participar</span>
+            <strong class="big">$1,000</strong>
+          </a>
+          <a class="pg-card guide reveal" style="--d: 0.1s" href="guia-cliente.html">
+            <span class="pill-y"><svg class="ic"><use href="#i-book" /></svg>Guía del cliente</span>
+            <h3>Todo tu servicio, explicado con claridad.</h3>
+            <p>Conoce el proceso, los paquetes, los cuidados y los requisitos. Al final encontrarás el reto interactivo Fumi-Car.</p>
+            <span class="link-arrow">Abrir la guía</span>
+            <img src="assets/images/logo-mark.webp" width="512" height="512" loading="lazy" alt="" />
+          </a>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section faq" id="faq">
+        <div class="wrap faq-grid">
+          <div class="reveal">
+            <span class="eyebrow">Preguntas frecuentes</span>
+            <h2 class="title">Lo que más nos preguntan.</h2>
+            <p class="lead">Si tu duda no está aquí, escríbenos y te respondemos directo.</p>
+            <a class="btn btn-wa" style="margin-top: 1.6rem" href="https://wa.me/525547117493?text=Hola%20Fumi-Car%2C%20tengo%20una%20duda" target="_blank" rel="noopener"><svg><use href="#i-wa" /></svg>Preguntar por WhatsApp</a>
+          </div>
+          <div class="faq-list reveal" style="--d: 0.1s">
+            <details open>
+              <summary>¿Cuánto tiempo debo estar fuera después de la aplicación?<svg class="ic"><use href="#i-chev" /></svg></summary>
+              <p>Entre 2 y 6 horas, según el método, el producto, la ventilación y el tamaño del lugar. La indicación del técnico siempre tiene prioridad.</p>
+            </details>
+            <details>
+              <summary>¿Cuánto debo ventilar al regresar?<svg class="ic"><use href="#i-chev" /></svg></summary>
+              <p>Ventila el espacio de 30 a 60 minutos al regresar. No mezcles productos de limpieza.</p>
+            </details>
+            <details>
+              <summary>¿Y si hay menores o mascotas en casa?<svg class="ic"><use href="#i-chev" /></svg></summary>
+              <p>Infórmalo antes del servicio. Recibirás indicaciones específicas para tu espacio.</p>
+            </details>
+            <details>
+              <summary>¿Qué formas de pago aceptan?<svg class="ic"><use href="#i-chev" /></svg></summary>
+              <p>Tarjeta de crédito o débito, efectivo y transferencia.</p>
+            </details>
+            <details>
+              <summary>¿Piden anticipo para agendar?<svg class="ic"><use href="#i-chev" /></svg></summary>
+              <p>No se requiere anticipo inicial. Para reprogramar se aplica un 20%, y el servicio express está sujeto a disponibilidad de ruta.</p>
+            </details>
+            <details>
+              <summary>¿Ofrecen garantía?<svg class="ic"><use href="#i-chev" /></svg></summary>
+              <p>Sí, por escrito: 3 meses en el paquete básico y 6 meses en el especial. La valoración técnica y el documento del servicio son la referencia definitiva.</p>
+            </details>
+            <details>
+              <summary>¿Los vehículos llevan emblemas?<svg class="ic"><use href="#i-chev" /></svg></summary>
+              <p>No. Trabajamos con discreción: vehículos sin emblemas y personal confiable.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACTO -->
+      <section class="section contact" id="contacto">
+        <div class="wrap contact-grid">
+          <div class="contact-info on-dark reveal">
+            <span class="eyebrow">Solicita atención</span>
+            <h2 class="title">Cuéntanos qué observaste.</h2>
+            <p class="lead">Área Metropolitana CDMX y Estado de México. Horario de 8:00 a 18:00.</p>
+            <a class="big-phone" href="tel:+525547117493"><svg class="ic"><use href="#i-phone" /></svg>55 4711 7493</a>
+            <ul class="contact-points">
+              <li><svg class="ic"><use href="#i-check" /></svg>Respuesta directa por WhatsApp</li>
+              <li><svg class="ic"><use href="#i-check" /></svg>Atención residencial y comercial</li>
+              <li><svg class="ic"><use href="#i-check" /></svg>Cobertura en CDMX y Estado de México</li>
+            </ul>
+          </div>
+          <form id="form" class="reveal" style="--d: 0.1s" novalidate>
+            <label>Nombre<input name="n" required minlength="2" maxlength="60" autocomplete="name" placeholder="Tu nombre" /><small class="error"></small></label>
+            <label>Teléfono<input name="t" required inputmode="numeric" autocomplete="tel" maxlength="10" placeholder="10 dígitos" /><small class="error"></small></label>
+            <label>Espacio<select name="e" required>
+                <option value="">Selecciona</option>
+                <option>Casa</option>
+                <option>Departamento</option>
+                <option>Negocio</option>
+              </select><small class="error"></small></label>
+            <label>Alcaldía o municipio<select name="z" id="zone-select" required>
+                <option value="">Selecciona tu alcaldía o municipio</option>
+                <optgroup label="Estado de México">
+                  <option>Ixtapaluca</option>
+                  <option>Chalco</option>
+                  <option>Valle de Chalco Solidaridad</option>
+                  <option>La Paz</option>
+                  <option>Nezahualcóyotl</option>
+                  <option>Chimalhuacán</option>
+                  <option>Chicoloapan</option>
+                  <option>Texcoco</option>
+                  <option>Ecatepec de Morelos</option>
+                  <option>Los Reyes Acaquilpan</option>
+                  <option>Coacalco de Berriozábal</option>
+                  <option>Cocotitlán</option>
+                  <option>Tezoyuca</option>
+                  <option>Otro municipio del Estado de México</option>
+                </optgroup>
+                <optgroup label="Ciudad de México">
+                  <option>Álvaro Obregón</option>
+                  <option>Azcapotzalco</option>
+                  <option>Benito Juárez</option>
+                  <option>Coyoacán</option>
+                  <option>Cuajimalpa de Morelos</option>
+                  <option>Cuauhtémoc</option>
+                  <option>Gustavo A. Madero</option>
+                  <option>Iztacalco</option>
+                  <option>Iztapalapa</option>
+                  <option>La Magdalena Contreras</option>
+                  <option>Miguel Hidalgo</option>
+                  <option>Milpa Alta</option>
+                  <option>Tláhuac</option>
+                  <option>Tlalpan</option>
+                  <option>Venustiano Carranza</option>
+                  <option>Xochimilco</option>
+                </optgroup>
+                <option value="__otro__">Otro municipio o delegación</option>
+              </select>
+              <input id="zone-other" class="zone-other" name="zone_other" maxlength="80" placeholder="Escribe tu municipio o delegación" hidden /><small class="error"></small></label>
+            <label class="full">Mensaje<textarea name="m" required minlength="10" maxlength="500" rows="4" placeholder="Describe brevemente lo que observaste"></textarea><small class="error"></small></label>
+            <button class="btn btn-wa full" type="submit"><svg><use href="#i-wa" /></svg>Continuar en WhatsApp</button>
+            <p class="privacy full">Los datos no se almacenan. El formulario prepara tu mensaje para WhatsApp.</p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="#inicio">
+            <img src="assets/images/logo-mark-sm.webp" width="48" height="48" alt="" />
+            <span>Fumi-Car<small>Control de plagas</small></span>
+          </a>
+          <p>Control profesional de plagas para hogares y negocios, con documentación y seguimiento digital.</p>
+        </div>
+        <div>
+          <h3>Explora</h3>
+          <a href="#servicios">Servicios</a>
+          <a href="#paquetes">Paquetes y programas</a>
+          <a href="#portal">Portal del cliente</a>
+          <a href="#trabajo">Trabajo real</a>
+          <a href="guia-cliente.html">Guía del cliente</a>
+          <a href="promociones.html">Promociones del mes</a>
+        </div>
+        <div>
+          <h3>Contacto</h3>
+          <a href="tel:+525547117493">55 4711 7493</a>
+          <a href="https://wa.me/525547117493" target="_blank" rel="noopener">WhatsApp directo</a>
+          <a href="https://www.facebook.com/fumigacionintegraldeplagas" target="_blank" rel="noopener">Facebook</a>
+        </div>
+        <div>
+          <h3>Cobertura</h3>
+          <p>Ciudad de México y Estado de México</p>
+          <p>Área Metropolitana del Valle de México</p>
+          <p>Lunes a sábado, 8:00 a 18:00</p>
+        </div>
       </div>
-      <div>
-        <h3>Explora</h3>
-        <a href="#servicios">Servicios</a
-        ><a href="#programas">Programas frecuentes</a
-        ><a href="#portal">Portal del cliente</a
-        ><a href="#galeria">Trabajo real</a
-        ><a href="promociones.html">Promociones del mes</a>
-      </div>
-      <div>
-        <h3>Contacto</h3>
-        <a href="tel:+525547117493">55 4711 7493</a
-        ><a href="https://wa.me/525547117493" target="_blank" rel="noopener"
-          >WhatsApp directo</a
-        >
-      </div>
-      <div>
-        <h3>Cobertura</h3>
-        <p>Ciudad de México y Estado de México</p>
-        <p>Área Metropolitana del Valle de México</p>
-        <p>Lunes a sábado</p>
-        <p>8:00 a 18:00</p>
-      </div>
-      <div class="footer-bottom">
-        <span>© <span id="year"></span> Fumi-Car</span
-        ><a href="#inicio">Volver arriba ↑</a>
+      <div class="wrap footer-bottom">
+        <span>© <span id="year">2026</span> Fumi-Car. Todos los derechos reservados.</span>
+        <a href="#inicio">Volver arriba ↑</a>
       </div>
     </footer>
-    <a
-      class="wa"
-      href="https://wa.me/525547117493?text=Hola%20Fumi-Car%2C%20quiero%20solicitar%20un%20servicio"
-      target="_blank"
-      rel="noopener"
-      aria-label="Contactar a Fumi-Car por WhatsApp"
-      ><svg viewBox="0 0 32 32" aria-hidden="true">
-        <path
-          d="M16 3a12 12 0 0 0-10.4 18L4 28l7.2-1.5A12 12 0 1 0 16 3Zm0 21.7c-1.7 0-3.3-.4-4.7-1.2l-.3-.2-4.2.9.9-4.1-.2-.3A9.7 9.7 0 1 1 16 24.7Zm5.3-7.2c-.3-.2-1.7-.9-2-.9-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1-1.8-.9-3-1.7-4.2-3.8-.3-.5.3-.5.9-1.6.1-.2.1-.4 0-.6l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.4-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.6c.2.2 2.4 3.7 5.9 5.2.8.4 1.5.6 2 .7.8.3 1.6.2 2.2.1.7-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4Z"
-        /></svg
-      ><span>WhatsApp</span></a
-    >
-    <div class="lightbox" hidden>
-      <button type="button" aria-label="Cerrar imagen">×</button
-      ><img alt="Trabajo de Fumi-Car" />
+
+    <a class="wa" href="https://wa.me/525547117493?text=Hola%20Fumi-Car%2C%20quiero%20solicitar%20un%20servicio" target="_blank" rel="noopener" aria-label="Contactar a Fumi-Car por WhatsApp">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><use href="#i-wa" /></svg><span>WhatsApp</span>
+    </a>
+    <div class="lightbox" hidden role="dialog" aria-modal="true" aria-label="Imagen ampliada">
+      <button type="button" aria-label="Cerrar imagen">×</button>
+      <img alt="Trabajo de Fumi-Car" />
     </div>
-    <script src="script.js"></script>
+    <script src="base.js?v=2026.10.01"></script>
+    <script src="home.js?v=2026.10.01"></script>
   </body>
 </html>

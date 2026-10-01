@@ -1,617 +1,403 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;900&family=Outfit:wght@500;700;900&display=swap");
-
-:root {
-  --ink: #17253f;
-  --navy: #17253f;
-  --cream: #fff8e9;
-  --paper: #fffdf7;
-  --lime: #d7ef68;
-  --coral: #ff6b58;
-  --yellow: #ffc844;
-  --blue: #54b7d2;
-  --line: #17253f26;
+/* Fumi-Car · promociones */
+.ic {
+  width: 22px;
+  height: 22px;
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
-* {
-  box-sizing: border-box;
-}
-html {
-  scroll-behavior: smooth;
-}
-body {
-  margin: 0;
-  color: var(--ink);
-  background: var(--cream);
-  font-family: "DM Sans", sans-serif;
-  line-height: 1.5;
-  overflow-x: hidden;
-}
-a {
-  color: inherit;
-  text-decoration: none;
-}
-img {
-  display: block;
-  width: 100%;
-}
-button {
-  font: inherit;
-}
-.confetti {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  opacity: 0.28;
-  background-image:
-    radial-gradient(var(--coral) 1.5px, transparent 1.5px),
-    radial-gradient(var(--blue) 1px, transparent 1px),
-    radial-gradient(var(--yellow) 1.5px, transparent 1.5px);
-  background-position:
-    12px 20px,
-    90px 70px,
-    55px 140px;
-  background-size:
-    180px 180px,
-    140px 140px,
-    220px 220px;
-}
-.promo-header {
-  width: min(1200px, calc(100% - 40px));
-  margin: 1rem auto 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 0.7rem 0.8rem 0.7rem 1rem;
-  border: 1px solid var(--line);
+.pill {
+  display: inline-block;
+  padding: 0.45rem 1rem;
   border-radius: 999px;
-  background: #fffdf7dd;
-  backdrop-filter: blur(16px);
-  position: relative;
-  z-index: 10;
-}
-.promo-brand {
-  display: flex;
-  align-items: center;
-  gap: 0.65rem;
-  font-family: Outfit, sans-serif;
-  font-weight: 900;
-  font-size: 1.1rem;
-}
-.promo-brand img {
-  width: 48px;
-  height: 48px;
-  object-fit: cover;
-  border: 2px solid var(--lime);
-  border-radius: 13px;
-}
-.promo-header nav {
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
-  font-size: 0.83rem;
+  background: rgb(255 255 255 / 0.14);
+  border: 1px solid rgb(255 255 255 / 0.28);
+  font-size: 0.8rem;
   font-weight: 700;
+  letter-spacing: 0.04em;
 }
-.promo-header nav a {
-  padding: 0.65rem 0.85rem;
-  border-radius: 99px;
-  transition:
-    background 0.25s,
-    transform 0.25s;
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.9rem;
 }
-.promo-header nav a:hover {
-  background: var(--lime);
-  transform: translateY(-2px);
-}
-.promo-header .promo-back {
-  background: var(--navy);
-  color: white;
-}
+
+/* hero */
 .promo-hero {
-  width: min(1200px, calc(100% - 40px));
-  margin: 0 auto;
-  min-height: 650px;
+  position: relative;
+  padding: 150px 0 clamp(4rem, 8vw, 6.5rem);
+  color: #fff;
+  background:
+    radial-gradient(700px 500px at 85% 20%, rgb(255 198 26 / 0.28), transparent 60%),
+    radial-gradient(600px 500px at 0% 100%, rgb(93 187 63 / 0.3), transparent 60%),
+    var(--forest);
+  overflow: hidden;
+}
+.promo-hero-grid {
   display: grid;
-  grid-template-columns: 1fr 0.9fr;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(2rem, 5vw, 4rem);
   align-items: center;
-  gap: clamp(2rem, 6vw, 6rem);
 }
-.hero-copy {
-  padding: 3rem 0;
+.promo-hero h1 {
+  font-size: clamp(2.5rem, 6vw, 4.6rem);
+  font-weight: 800;
+  margin: 1.2rem 0;
 }
-.eyebrow {
-  margin: 0 0 0.8rem;
-  color: var(--coral);
-  font-size: 0.76rem;
-  font-weight: 900;
-  letter-spacing: 0.16em;
+.promo-hero h1::after {
+  content: "";
+  display: block;
+  width: 84px;
+  height: 6px;
+  border-radius: 6px;
+  background: var(--sun);
+  margin-top: 1.1rem;
 }
-.eyebrow.dark {
-  color: #28768d;
-}
-h1,
-h2,
-h3 {
-  font-family: Outfit, sans-serif;
-}
-h1 {
-  max-width: 680px;
-  margin: 0;
-  font-size: clamp(3.4rem, 8vw, 7.6rem);
-  line-height: 0.9;
-  letter-spacing: -0.04em;
-}
-h2 {
-  margin: 0;
-  font-size: clamp(2.3rem, 5vw, 5rem);
-  line-height: 0.95;
-  letter-spacing: -0.035em;
-}
-.hero-lede {
-  max-width: 520px;
-  margin: 1.6rem 0 2rem;
-  font-size: 1.15rem;
-  color: #516176;
-}
-.hero-cta,
-.dark-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 0.95rem 1.15rem 0.95rem 1.35rem;
-  border-radius: 999px;
-  background: var(--coral);
-  color: white;
-  font-weight: 900;
-  box-shadow: 0 12px 25px #ff6b5845;
-  transition:
-    transform 0.25s,
-    box-shadow 0.25s;
-}
-.hero-cta:hover,
-.dark-cta:hover {
-  transform: translateY(-4px) rotate(-1deg);
-  box-shadow: 0 18px 32px #ff6b5859;
-}
-.hero-cta span,
-.dark-cta span {
-  display: grid;
-  place-items: center;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  background: #fff4;
+.promo-hero .hero-copy > p {
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+  color: #dcece4;
+  max-width: 44ch;
 }
 .hero-collage {
   position: relative;
-  min-height: 450px;
-  transform: rotate(2deg);
+  max-width: 420px;
+  justify-self: center;
+  transform: rotate(2.5deg);
+  transition: transform 0.4s;
+}
+.hero-collage:hover {
+  transform: rotate(0);
 }
 .collage-main {
-  position: absolute;
-  inset: 7% 2% auto auto;
-  width: 86%;
-  height: 390px;
+  width: 100%;
+  aspect-ratio: 4/4.8;
   object-fit: cover;
-  border: 9px solid white;
-  border-radius: 42px 10px 42px 10px;
-  box-shadow:
-    20px 24px 0 var(--blue),
-    0 24px 50px #17253f3b;
+  border-radius: var(--radius-lg);
+  border: 8px solid #fff;
+  box-shadow: 0 40px 80px -30px rgb(0 0 0 / 0.7);
 }
 .sticker {
   position: absolute;
-  z-index: 2;
   display: grid;
   place-items: center;
-  width: 112px;
-  height: 112px;
+  font-family: var(--font-display);
+  font-weight: 800;
   border-radius: 50%;
-  font-family: Outfit, sans-serif;
-  font-weight: 900;
-  box-shadow: 0 10px 25px #17253f35;
-  animation: stickerFloat 4s ease-in-out infinite;
+  box-shadow: var(--shadow);
+  animation: float 4s ease-in-out infinite;
 }
 .sticker-yellow {
-  left: 0;
-  top: 13%;
-  background: var(--yellow);
-  transform: rotate(-12deg);
+  width: 110px;
+  height: 110px;
+  top: -30px;
+  left: -40px;
+  background: var(--sun);
+  color: var(--forest);
+  font-size: 1.7rem;
+  rotate: -12deg;
 }
 .sticker-coral {
-  right: -1%;
-  bottom: 11%;
-  background: var(--coral);
-  color: white;
-  font-size: 1.45rem;
-  animation-delay: -1.5s;
+  width: 120px;
+  height: 120px;
+  right: -30px;
+  bottom: 70px;
+  background: #ff6b3d;
+  color: #fff;
+  font-size: 1.6rem;
+  rotate: 10deg;
+  animation-delay: -2s;
 }
 .ticket {
   position: absolute;
-  left: 7%;
-  bottom: 7%;
-  z-index: 3;
-  padding: 0.9rem 1.1rem;
-  background: white;
-  border: 2px dashed var(--navy);
-  transform: rotate(-8deg);
+  left: -24px;
+  bottom: 24px;
+  padding: 0.8rem 1.2rem;
+  border-radius: 14px;
+  background: #fff;
+  color: var(--muted);
   font-size: 0.7rem;
-  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  line-height: 1.2;
+  box-shadow: var(--shadow);
+  border-left: 6px dashed var(--sun);
+  rotate: -5deg;
 }
 .ticket strong {
-  font-size: 1.25rem;
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  letter-spacing: 0.02em;
+  color: var(--forest);
 }
-.prize-section {
-  padding: 7rem max(20px, 5vw);
-  background: var(--paper);
+@keyframes float {
+  50% {
+    translate: 0 -10px;
+  }
 }
-.section-heading {
-  width: min(1200px, 100%);
-  margin: 0 auto 2.5rem;
-}
+
+/* premios */
 .winner-frame {
-  width: min(1050px, 100%);
-  margin: 0 auto 2rem;
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: clamp(1.5rem, 4vw, 4rem);
-  align-items: center;
-  padding: clamp(1rem, 2vw, 1.5rem);
-  border: 3px solid var(--navy);
-  border-radius: 30px;
-  background: #fff;
-  box-shadow: 14px 14px 0 var(--lime);
+  grid-template-columns: 1fr 1fr;
+  margin-top: 3rem;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--forest);
+  color: #fff;
+  box-shadow: var(--shadow);
 }
 .winner-image {
   position: relative;
-  overflow: hidden;
-  border-radius: 20px;
+  min-height: 340px;
 }
 .winner-image img {
-  height: 320px;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  filter: saturate(1.12);
 }
 .winner-ribbon {
   position: absolute;
-  left: 1rem;
-  bottom: 1rem;
-  padding: 0.55rem 0.8rem;
-  background: var(--yellow);
-  font-weight: 900;
-  transform: rotate(-3deg);
-}
-.winner-copy h3 {
-  margin: 0.4rem 0 0.7rem;
-  font-size: clamp(2rem, 4vw, 4rem);
-  line-height: 0.95;
-}
-.winner-copy > p:not(.eyebrow) {
-  color: #516176;
-}
-.fake-prize {
-  margin: 1rem 0;
-  font-family: Outfit, sans-serif;
-  font-size: clamp(3.2rem, 7vw, 6rem);
-  font-weight: 900;
-  color: var(--coral);
-  line-height: 0.85;
-}
-.fake-prize span {
-  display: block;
-  margin-top: 0.5rem;
-  color: var(--ink);
-  font-family: "DM Sans", sans-serif;
-  font-size: 0.9rem;
-  font-weight: 700;
-}
-.winner-copy > small {
-  color: #687488;
+  top: 1.4rem;
+  left: 1.4rem;
+  background: var(--sun);
+  color: var(--forest);
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 .winner-copy {
-  position: relative;
-}
-.winner-logo {
-  position: absolute;
-  right: 0;
-  bottom: -0.5rem;
-  width: 78px;
-  height: 78px;
-  object-fit: cover;
-  border: 3px solid var(--coral);
-  border-radius: 20px;
-  background: white;
-  box-shadow: 0 8px 0 var(--yellow);
-  animation: logoOrbit 5s ease-in-out infinite;
-}
-.winner-copy .winner-logo:hover {
-  animation-play-state: paused;
-  transform: rotate(-6deg) scale(1.12);
-}
-.prize-grid {
-  width: min(1200px, 100%);
-  margin: 3rem auto 0;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-}
-.prize-card {
-  min-height: 220px;
-  padding: 1.25rem;
-  border: 2px solid var(--ink);
-  border-radius: 20px;
+  padding: clamp(1.8rem, 4vw, 3.2rem);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  box-shadow: 7px 7px 0 #17253f;
-  transition:
-    transform 0.3s,
-    box-shadow 0.3s;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+}
+.winner-copy .eyebrow {
+  color: var(--lime);
+}
+.winner-copy h3 {
+  font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+}
+.winner-copy p,
+.winner-copy small {
+  color: #cfe3d9;
+}
+.fake-prize {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(3rem, 6vw, 4.6rem);
+  line-height: 1;
+  color: var(--sun);
+}
+.fake-prize span {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+}
+.prize-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+  margin-top: 1.4rem;
+}
+.prize-card {
+  position: relative;
+  padding: 1.8rem;
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  overflow: hidden;
+  transition: transform 0.3s;
 }
 .prize-card:hover {
-  transform: translateY(-9px) rotate(-1deg);
-  box-shadow: 11px 14px 0 #17253f;
+  transform: translateY(-8px) rotate(-1deg);
+}
+.prize-card > p {
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.7;
+  margin-top: 1rem;
+}
+.prize-card h3 {
+  font-size: 1.5rem;
+}
+.prize-card > span:last-child {
+  font-size: 0.92rem;
+  opacity: 0.8;
 }
 .prize-icon {
   display: grid;
   place-items: center;
-  width: 54px;
-  height: 54px;
-  border: 2px solid currentColor;
-  border-radius: 50%;
-  font-family: Outfit, sans-serif;
-  font-size: 1.35rem;
-  font-weight: 900;
-}
-.prize-card p {
-  margin: 0;
-  font-size: 0.75rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
-.prize-card h3 {
-  margin: 0.4rem 0;
-  font-size: 1.45rem;
-  line-height: 1;
-}
-.prize-card > span:last-child {
-  font-size: 0.82rem;
-  font-weight: 700;
+  width: 62px;
+  height: 62px;
+  border-radius: 20px;
+  background: rgb(255 255 255 / 0.55);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.6rem;
 }
 .prize-lime {
   background: var(--lime);
+  color: var(--forest);
 }
 .prize-blue {
-  background: var(--blue);
+  background: #bfe3ff;
+  color: #0c2f4e;
 }
 .prize-coral {
-  background: var(--coral);
-  color: white;
+  background: #ffb199;
+  color: #4d1708;
 }
 .prize-yellow {
-  background: var(--yellow);
+  background: var(--sun);
+  color: #3c2a00;
 }
+
+/* participar */
 .participation {
-  width: min(1200px, calc(100% - 40px));
-  margin: 0 auto;
-  padding: 7rem 0;
+  background: var(--paper);
+}
+.participation-grid {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 5rem);
   align-items: center;
-  gap: clamp(2rem, 7vw, 7rem);
 }
 .participation-image {
   position: relative;
+  isolation: isolate;
 }
 .participation-image img {
-  height: 470px;
+  width: 100%;
+  aspect-ratio: 5/4.4;
   object-fit: cover;
-  border-radius: 20px 60px 20px 60px;
-  border: 8px solid var(--blue);
-  box-shadow: 17px 17px 0 var(--yellow);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+.participation-image::before {
+  content: "";
+  position: absolute;
+  inset: 22px -16px -16px 22px;
+  border-radius: var(--radius-lg);
+  background: var(--lime);
+  z-index: -1;
 }
 .image-caption {
   position: absolute;
-  right: -1rem;
-  bottom: 1.5rem;
-  padding: 0.8rem 1rem;
-  background: var(--coral);
-  color: white;
-  font-weight: 900;
-  transform: rotate(3deg);
+  left: 1.2rem;
+  bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem 1.1rem;
+  border-radius: 999px;
+  background: #fff;
+  font-weight: 800;
+  box-shadow: var(--shadow);
 }
-.steps-copy h2 {
-  max-width: 630px;
+.image-caption .ic {
+  color: var(--green);
 }
 .promo-steps {
   list-style: none;
   padding: 0;
-  margin: 2rem 0;
+  margin: 1.8rem 0;
   display: grid;
-  gap: 0.8rem;
+  gap: 0.9rem;
 }
 .promo-steps li {
   display: flex;
+  gap: 1rem;
   align-items: flex-start;
-  gap: 0.8rem;
-  padding: 0.9rem;
-  border-top: 1px solid var(--line);
+  padding: 1.1rem 1.2rem;
+  border-radius: 18px;
+  background: var(--cream);
+  border: 1px solid var(--line);
 }
 .promo-steps b {
   flex: none;
   display: grid;
   place-items: center;
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  background: var(--navy);
-  color: var(--yellow);
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  background: var(--forest);
+  color: var(--sun);
+  font-family: var(--font-display);
+  font-size: 1.1rem;
 }
 .promo-steps strong {
   display: block;
-  font-family: Outfit, sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
+}
+.promo-steps span {
+  color: var(--muted);
 }
 .fine-print {
-  max-width: 570px;
-  color: #687488;
-  font-size: 0.82rem;
-}
-.dark-cta {
-  margin-top: 0.8rem;
-  background: var(--navy);
-  box-shadow: 0 12px 25px #17253f45;
-}
-.facebook-icon {
-  width: 22px;
-  height: 22px;
-  fill: currentColor;
-}
-.promo-footer-cta {
-  padding: 6rem 20px;
-  text-align: center;
-  background: var(--yellow);
-}
-.promo-footer-cta h2 {
-  max-width: 820px;
-  margin: 0 auto 2rem;
-}
-.promo-footer {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 1.2rem max(20px, 5vw);
-  background: var(--navy);
-  color: white;
   font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 1.6rem;
 }
-.promo-footer a {
-  color: var(--lime);
-  font-weight: 900;
+
+.promo-cta {
+  padding-block: clamp(4rem, 9vw, 7rem);
+  text-align: center;
+  color: #fff;
+  background:
+    radial-gradient(700px 400px at 50% 120%, rgb(255 198 26 / 0.3), transparent 60%),
+    var(--forest);
 }
-@keyframes stickerFloat {
-  50% {
-    transform: translateY(-10px) rotate(4deg);
-  }
+.promo-cta .title {
+  max-width: 18ch;
+  margin-inline: auto;
 }
-@keyframes logoOrbit {
-  0%,
-  100% {
-    transform: rotate(-4deg) translateY(0);
-  }
-  50% {
-    transform: rotate(4deg) translateY(-8px);
-  }
+.promo-cta .hero-actions {
+  justify-content: center;
 }
-@media (max-width: 850px) {
-  .promo-header nav a:not(.promo-back) {
-    display: none;
-  }
-  .promo-hero {
-    min-height: auto;
-    padding: 4rem 0 5rem;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-  .hero-copy {
-    padding: 0;
-  }
-  .hero-collage {
-    min-height: 390px;
-  }
-  .collage-main {
-    height: 340px;
-  }
-  .prize-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .participation {
-    grid-template-columns: 1fr;
-    padding: 5rem 0;
-  }
-  .participation-image img {
-    height: 340px;
-  }
-}
-@media (max-width: 560px) {
-  .promo-header {
-    width: calc(100% - 24px);
-    margin-top: 0.6rem;
-  }
-  .promo-header nav {
-    font-size: 0.75rem;
-  }
-  .promo-header .promo-back {
-    padding: 0.55rem 0.7rem;
-  }
-  h1 {
-    font-size: clamp(3rem, 16vw, 4.6rem);
-  }
-  .hero-collage {
-    min-height: 310px;
-  }
-  .collage-main {
-    inset: 5% 0 auto auto;
-    width: 88%;
-    height: 270px;
-    border-width: 6px;
-  }
-  .sticker {
-    width: 82px;
-    height: 82px;
-    font-size: 0.8rem;
-  }
-  .sticker-coral {
-    font-size: 1.05rem;
-  }
-  .ticket {
-    font-size: 0.58rem;
-    left: 3%;
-    bottom: 4%;
-  }
+
+@media (max-width: 1020px) {
+  .promo-hero-grid,
+  .participation-grid,
   .winner-frame {
     grid-template-columns: 1fr;
-    box-shadow: 8px 8px 0 var(--lime);
-  }
-  .winner-image img {
-    height: 230px;
-  }
-  .winner-logo {
-    position: relative;
-    right: auto;
-    bottom: auto;
-    display: block;
-    margin-top: 1rem;
   }
   .prize-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 0.7rem;
   }
-  .prize-card {
-    min-height: 190px;
-    padding: 0.9rem;
+  .hero-collage {
+    max-width: 340px;
+    margin-top: 1rem;
   }
-  .prize-card h3 {
-    font-size: 1.15rem;
-  }
-  .participation-image img {
-    height: 290px;
-  }
-  .image-caption {
-    right: 0.5rem;
-    font-size: 0.8rem;
-  }
-  .promo-footer {
-    flex-direction: column;
-    text-align: center;
+  .participation-image {
+    margin-inline: 16px;
   }
 }
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation: none !important;
-    transition: none !important;
+@media (max-width: 560px) {
+  .prize-grid {
+    grid-template-columns: 1fr;
+  }
+  .promo-hero {
+    padding-top: 120px;
+  }
+  .sticker-yellow {
+    left: -14px;
+  }
+  .sticker-coral {
+    right: -12px;
   }
 }

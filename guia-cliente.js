@@ -1,22 +1,10 @@
-const $ = (s, c = document) => c.querySelector(s),
-  $$ = (s, c = document) => [...c.querySelectorAll(s)];
-const ob = new IntersectionObserver(
-  (es) =>
-    es.forEach((e) => {
-      if (e.isIntersecting) {
-        e.target.classList.add("show");
-        ob.unobserve(e.target);
-      }
-    }),
-  { threshold: 0.1 },
-);
-$$(".reveal").forEach((x) => ob.observe(x));
+/* Fumi-Car · guía del cliente (agenda y juego). $, $$ vienen de base.js */
 const agendaSteps = [
   {
     kicker: "ETAPA 01 · PAGO",
     title: "Formas de pago",
     image:
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=900&q=78",
     alt: "Pago con tarjeta en un dispositivo móvil",
     details: ["Tarjeta de crédito o débito", "Efectivo", "Transferencia"],
   },
@@ -24,7 +12,7 @@ const agendaSteps = [
     kicker: "ETAPA 02 · AGENDA",
     title: "Para programar",
     image:
-      "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=78",
     alt: "Personas organizando una reunión de trabajo",
     details: [
       "Ubicación y dirección completa",
@@ -37,7 +25,7 @@ const agendaSteps = [
     kicker: "ETAPA 03 · FLEXIBILIDAD",
     title: "Cambios y reagendas",
     image:
-      "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=1200&q=85",
+      "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=900&q=78",
     alt: "Calendario y agenda para reorganizar una fecha",
     details: [
       "Sin anticipo inicial",
@@ -118,8 +106,9 @@ function spawn() {
   r.style.top = Math.random() * Math.max(1, board.clientHeight - 100) + "px";
   r.style.setProperty("--speed", 0.55 + Math.random() * 0.7 + "s");
   const img = document.createElement("img");
-  img.src = "assets/images/logo-fumicar-oficial.webp";
+  img.src = "assets/images/logo-mark-sm.webp";
   img.alt = "";
+  img.width = img.height = 92;
   r.append(img);
   const life = setTimeout(
     () => {

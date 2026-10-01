@@ -11,200 +11,210 @@
       name="description"
       content="Participa en las promociones del mes de Fumi-Car y gana descuentos, servicios gratis o hasta $1,000 en efectivo."
     />
-    <meta name="theme-color" content="#17253f" />
+    <meta name="theme-color" content="#06231b" />
+    <link rel="canonical" href="https://fumi-car.com/promociones.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Fumi-Car" />
+    <meta property="og:title" content="Promociones del mes | Fumi-Car" />
+    <meta
+      property="og:description"
+      content="Contrata, recibe tu folio y participa por descuentos, servicios gratis o hasta $1,000 en efectivo."
+    />
+    <meta property="og:image" content="https://fumi-car.com/assets/images/og-cover.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png" />
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;900&family=Outfit:wght@500;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-    <link rel="stylesheet" href="promociones.css" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <link rel="stylesheet" href="base.css?v=2026.10.01" />
+    <link rel="stylesheet" href="promociones.css?v=2026.10.01" />
   </head>
   <body>
-    <div class="confetti" aria-hidden="true"></div>
-    <header class="promo-header">
-      <a class="promo-brand" href="index.html#inicio">
-        <img src="assets/images/Fumi-Car_logo.png" alt="Fumi-Car" />
-        <span>Fumi-Car</span>
-      </a>
-      <nav aria-label="Promociones">
-        <a href="#premio">Premio del mes</a>
-        <a href="#participa">Cómo participar</a>
-        <a class="promo-back" href="index.html">Volver al sitio</a>
-      </nav>
+    <a class="skip" href="#contenido">Saltar al contenido</a>
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <defs>
+        <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+        <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></symbol>
+        <symbol id="i-gift" viewBox="0 0 24 24"><path d="M20 12v10H4V12M2 7h20v5H2zM12 22V7M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></symbol>
+        <symbol id="i-wa" viewBox="0 0 32 32"><path d="M16 3a12 12 0 0 0-10.4 18L4 28l7.2-1.5A12 12 0 1 0 16 3Zm0 21.7c-1.7 0-3.3-.4-4.7-1.2l-.3-.2-4.2.9.9-4.1-.2-.3A9.7 9.7 0 1 1 16 24.7Zm5.3-7.2c-.3-.2-1.7-.9-2-.9-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1-1.8-.9-3-1.7-4.2-3.8-.3-.5.3-.5.9-1.6.1-.2.1-.4 0-.6l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.4-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.6c.2.2 2.4 3.7 5.9 5.2.8.4 1.5.6 2 .7.8.3 1.6.2 2.2.1.7-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4Z"/></symbol>
+        <symbol id="i-fb" viewBox="0 0 24 24"><path d="M14 8h3V4h-3c-3.3 0-5 1.7-5 5v3H6v4h3v8h4v-8h3.2l.8-4H13V9c0-.7.3-1 1-1Z"/></symbol>
+      </defs>
+    </svg>
+
+    <header class="site-header solid">
+      <div class="navbar">
+        <a class="brand" href="index.html#inicio" aria-label="Fumi-Car, inicio">
+          <img src="assets/images/logo-mark-sm.webp" width="48" height="48" alt="" />
+          <span>Fumi-Car<small>Control de plagas</small></span>
+        </a>
+        <button class="menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span>
+        </button>
+        <div class="nav-backdrop"></div>
+        <nav class="nav" aria-label="Navegación principal">
+          <button class="nav-close" type="button" aria-label="Cerrar menú">×</button>
+          <div class="nav-links">
+            <a href="index.html#servicios">Servicios</a>
+            <a href="index.html#paquetes">Paquetes</a>
+            <a href="index.html#portal">Portal</a>
+            <a href="index.html#trabajo">Trabajo real</a>
+            <a href="guia-cliente.html">Guía</a>
+            <a href="promociones.html" aria-current="page">Promociones</a>
+            <a class="btn btn-wa" href="https://wa.me/525547117493?text=Hola%20Fumi-Car%2C%20quiero%20conocer%20la%20promoci%C3%B3n%20del%20mes" target="_blank" rel="noopener"><svg><use href="#i-wa" /></svg>Cotizar</a>
+          </div>
+        </nav>
+      </div>
     </header>
 
-    <main>
+    <main id="contenido">
       <section class="promo-hero">
-        <div class="hero-copy animate__animated animate__fadeInUp">
-          <p class="eyebrow">PROMOCIONES DEL MES · FUMI-CAR</p>
-          <h1>Tu servicio puede traer una sorpresa enorme.</h1>
-          <p class="hero-lede">
-            Contrata, recibe tu reporte en PestOS y participa por descuentos,
-            servicios gratis o efectivo.
-          </p>
-          <a class="hero-cta" href="#participa"
-            >Quiero participar <span>↓</span></a
-          >
-        </div>
-        <div
-          class="hero-collage animate__animated animate__fadeInRight"
-          aria-label="Promociones y premios Fumi-Car"
-        >
-          <img
-            class="collage-main"
-            src="https://images.unsplash.com/photo-1607082349566-187342175e2f?auto=format&fit=crop&w=1200&q=85"
-            alt="Persona recibiendo un premio de una promoción"
-          />
-          <div class="sticker sticker-yellow">GANA</div>
-          <div class="sticker sticker-coral">$1,000</div>
-          <div class="ticket">FOLIO<br /><strong>PESTOS</strong></div>
-        </div>
-      </section>
-
-      <section class="prize-section" id="premio">
-        <div class="section-heading animate__animated animate__fadeInUp">
-          <p class="eyebrow dark">PREMIO DESTACADO</p>
-          <h2>Un folio puede cambiar tu siguiente visita.</h2>
-        </div>
-        <article class="winner-frame animate__animated animate__zoomIn">
-          <div class="winner-image">
-            <img
-              src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=85"
-              alt="Persona participando en una promoción con premio"
-            />
-            <span class="winner-ribbon">GANADOR DEL MES</span>
+        <div class="wrap promo-hero-grid">
+          <div class="hero-copy">
+            <span class="pill">Promociones del mes · Fumi-Car</span>
+            <h1>Tu servicio puede traer una sorpresa enorme.</h1>
+            <p>Contrata, recibe tu reporte en PestOS y participa por descuentos, servicios gratis o efectivo.</p>
+            <div class="hero-actions">
+              <a class="btn" href="#participa">Quiero participar</a>
+              <a class="btn btn-ghost" href="#premio">Ver premios</a>
+            </div>
           </div>
-          <div class="winner-copy">
-            <p class="eyebrow dark">FOLIO GANADOR · PROMOCIÓN VIGENTE</p>
-            <h3>¡Felicidades, FUMI-2408!</h3>
-            <p>
-              El ganador del mes se publicará en esta sección junto con su folio
-              y el premio obtenido.
-            </p>
-            <div class="fake-prize">50% <span>de descuento</span></div>
-            <small
-              >Consulta aquí la actualización de cada promoción vigente.</small
-            >
-            <img
-              class="winner-logo"
-              src="assets/images/Fumi-Car_logo.png"
-              alt="Fumi-Car"
-            />
+          <div class="hero-collage" aria-label="Promociones y premios Fumi-Car">
+            <img class="collage-main" src="https://images.unsplash.com/photo-1607082349566-187342175e2f?auto=format&fit=crop&w=900&q=78" width="900" height="1100" alt="Persona recibiendo un premio de una promoción" fetchpriority="high" />
+            <div class="sticker sticker-yellow">GANA</div>
+            <div class="sticker sticker-coral">$1,000</div>
+            <div class="ticket">FOLIO<strong>PESTOS</strong></div>
           </div>
-        </article>
-        <div class="prize-grid">
-          <article
-            class="prize-card prize-lime animate__animated animate__fadeInUp"
-          >
-            <span class="prize-icon">%</span>
-            <p>Premio 01</p>
-            <h3>10% de descuento</h3>
-            <span>Para tu siguiente servicio</span>
-          </article>
-          <article
-            class="prize-card prize-blue animate__animated animate__fadeInUp animate__delay-1s"
-          >
-            <span class="prize-icon">50</span>
-            <p>Premio 02</p>
-            <h3>Hasta 50% menos</h3>
-            <span>En una visita seleccionada</span>
-          </article>
-          <article
-            class="prize-card prize-coral animate__animated animate__fadeInUp animate__delay-2s"
-          >
-            <span class="prize-icon">★</span>
-            <p>Premio 03</p>
-            <h3>Servicio totalmente gratis</h3>
-            <span>La sorpresa más buscada</span>
-          </article>
-          <article
-            class="prize-card prize-yellow animate__animated animate__fadeInUp animate__delay-2s"
-          >
-            <span class="prize-icon">$</span>
-            <p>Premio 04</p>
-            <h3>Hasta $1,000 en efectivo</h3>
-            <span>Un premio que sí se siente</span>
-          </article>
         </div>
       </section>
 
-      <section class="participation" id="participa">
-        <div class="participation-image animate__animated animate__fadeInLeft">
-          <img
-            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=85"
-            alt="Persona consultando un reporte digital"
-          />
-          <div class="image-caption">Tu reporte guarda la llave.</div>
-        </div>
-        <div class="steps-copy">
-          <p class="eyebrow">PARTICIPAR ES SENCILLO</p>
-          <h2>Contrata. Consulta. Participa.</h2>
-          <ol class="promo-steps">
-            <li>
-              <b>01</b
-              ><span
-                ><strong>Contrata un servicio</strong> Agenda tu atención con
-                Fumi-Car.</span
-              >
-            </li>
-            <li>
-              <b>02</b
-              ><span
-                ><strong>Recibe tu folio</strong> El reporte de servicio aparece
-                en el portal PestOS.</span
-              >
-            </li>
-            <li>
-              <b>03</b
-              ><span
-                ><strong>Espera la rifa</strong> Ese folio entra en la promoción
-                del mes.</span
-              >
-            </li>
-          </ol>
-          <p class="fine-print">
-            Promoción sujeta a bases, vigencia y disponibilidad. Conserva tu
-            folio y consulta las condiciones publicadas.
-          </p>
-          <a
-            class="dark-cta"
-            href="https://www.facebook.com/fumigacionintegraldeplagas"
-            target="_blank"
-            rel="noopener"
-          >
-            <svg class="facebook-icon" viewBox="0 0 24 24" aria-hidden="true">
-              <path
-                d="M14 8h3V4h-3c-3.3 0-5 1.7-5 5v3H6v4h3v8h4v-8h3.2l.8-4H13V9c0-.7.3-1 1-1Z"
-              />
-            </svg>
-            Consultar en página de Facebook <span>↗</span></a
-          >
+      <section class="section prize-section" id="premio">
+        <div class="wrap">
+          <div class="head-center reveal">
+            <span class="eyebrow">Premio destacado</span>
+            <h2 class="title">Un folio puede cambiar tu siguiente visita.</h2>
+          </div>
+
+          <article class="winner-frame reveal">
+            <div class="winner-image">
+              <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1000&q=78" width="1000" height="760" loading="lazy" alt="Persona participando en una promoción con premio" />
+              <span class="winner-ribbon">Ganador del mes</span>
+            </div>
+            <div class="winner-copy">
+              <span class="eyebrow">Folio ganador · Promoción vigente</span>
+              <h3>¡Felicidades, FUMI-2408!</h3>
+              <p>El ganador del mes se publicará en esta sección junto con su folio y el premio obtenido.</p>
+              <div class="fake-prize">50% <span>de descuento</span></div>
+              <small>Consulta aquí la actualización de cada promoción vigente.</small>
+            </div>
+          </article>
+
+          <div class="prize-grid">
+            <article class="prize-card prize-lime reveal">
+              <span class="prize-icon">%</span>
+              <p>Premio 01</p>
+              <h3>10% de descuento</h3>
+              <span>Para tu siguiente servicio</span>
+            </article>
+            <article class="prize-card prize-blue reveal" style="--d: 0.08s">
+              <span class="prize-icon">50</span>
+              <p>Premio 02</p>
+              <h3>Hasta 50% menos</h3>
+              <span>En una visita seleccionada</span>
+            </article>
+            <article class="prize-card prize-coral reveal" style="--d: 0.16s">
+              <span class="prize-icon">★</span>
+              <p>Premio 03</p>
+              <h3>Servicio totalmente gratis</h3>
+              <span>La sorpresa más buscada</span>
+            </article>
+            <article class="prize-card prize-yellow reveal" style="--d: 0.24s">
+              <span class="prize-icon">$</span>
+              <p>Premio 04</p>
+              <h3>Hasta $1,000 en efectivo</h3>
+              <span>Un premio que sí se siente</span>
+            </article>
+          </div>
         </div>
       </section>
 
-      <section class="promo-footer-cta">
-        <p class="eyebrow dark">QUE LA SUERTE TE ENCUENTRE TRABAJANDO</p>
-        <h2>Tu próximo servicio también puede traer premio.</h2>
-        <a
-          class="hero-cta"
-          href="https://wa.me/525547117493?text=Hola%20Fumi-Car%2C%20quiero%20conocer%20la%20promoci%C3%B3n%20del%20mes"
-          target="_blank"
-          rel="noopener"
-          >Preguntar por la promoción <span>↗</span></a
-        >
+      <section class="section participation" id="participa">
+        <div class="wrap participation-grid">
+          <div class="participation-image reveal">
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1000&q=78" width="1000" height="800" loading="lazy" alt="Persona consultando un reporte digital" />
+            <div class="image-caption"><svg class="ic"><use href="#i-file" /></svg>Tu reporte guarda la llave.</div>
+          </div>
+          <div class="steps-copy reveal" style="--d: 0.1s">
+            <span class="eyebrow">Participar es sencillo</span>
+            <h2 class="title">Contrata. Consulta. Participa.</h2>
+            <ol class="promo-steps">
+              <li><b>01</b><span><strong>Contrata un servicio</strong>Agenda tu atención con Fumi-Car.</span></li>
+              <li><b>02</b><span><strong>Recibe tu folio</strong>El reporte de servicio aparece en el portal PestOS.</span></li>
+              <li><b>03</b><span><strong>Espera la rifa</strong>Ese folio entra en la promoción del mes.</span></li>
+            </ol>
+            <p class="fine-print">Promoción sujeta a bases, vigencia y disponibilidad. Conserva tu folio y consulta las condiciones publicadas.</p>
+            <a class="btn btn-dark" href="https://www.facebook.com/fumigacionintegraldeplagas" target="_blank" rel="noopener"><svg><use href="#i-fb" /></svg>Consultar en página de Facebook ↗</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="promo-cta">
+        <div class="wrap reveal">
+          <span class="eyebrow light">Que la suerte te encuentre trabajando</span>
+          <h2 class="title">Tu próximo servicio también puede traer premio.</h2>
+          <div class="hero-actions">
+            <a class="btn btn-wa" href="https://wa.me/525547117493?text=Hola%20Fumi-Car%2C%20quiero%20conocer%20la%20promoci%C3%B3n%20del%20mes" target="_blank" rel="noopener"><svg><use href="#i-wa" /></svg>Preguntar por la promoción</a>
+            <a class="btn btn-ghost" href="index.html#contacto">Solicitar servicio</a>
+          </div>
+        </div>
       </section>
     </main>
 
-    <footer class="promo-footer">
-      <a href="index.html#inicio">← Fumi-Car</a>
-      <span>Área Metropolitana CDMX y Estado de México</span>
-      <a href="index.html#contacto">Solicitar servicio</a>
+    <footer class="site-footer">
+      <div class="wrap footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html#inicio">
+            <img src="assets/images/logo-mark-sm.webp" width="48" height="48" alt="" />
+            <span>Fumi-Car<small>Control de plagas</small></span>
+          </a>
+          <p>Control profesional de plagas para hogares y negocios, con documentación y seguimiento digital.</p>
+        </div>
+        <div>
+          <h3>Explora</h3>
+          <a href="index.html#servicios">Servicios</a>
+          <a href="index.html#paquetes">Paquetes y programas</a>
+          <a href="index.html#portal">Portal del cliente</a>
+          <a href="guia-cliente.html">Guía del cliente</a>
+          <a href="promociones.html">Promociones del mes</a>
+        </div>
+        <div>
+          <h3>Contacto</h3>
+          <a href="tel:+525547117493">55 4711 7493</a>
+          <a href="https://wa.me/525547117493" target="_blank" rel="noopener">WhatsApp directo</a>
+          <a href="https://www.facebook.com/fumigacionintegraldeplagas" target="_blank" rel="noopener">Facebook</a>
+        </div>
+        <div>
+          <h3>Cobertura</h3>
+          <p>Ciudad de México y Estado de México</p>
+          <p>Lunes a sábado, 8:00 a 18:00</p>
+        </div>
+      </div>
+      <div class="wrap footer-bottom">
+        <span>© <span id="year">2026</span> Fumi-Car. Todos los derechos reservados.</span>
+        <a href="index.html">← Volver al sitio</a>
+      </div>
     </footer>
-    <script src="promociones.js"></script>
+
+    <a class="wa" href="https://wa.me/525547117493?text=Hola%20Fumi-Car%2C%20quiero%20conocer%20la%20promoci%C3%B3n%20del%20mes" target="_blank" rel="noopener" aria-label="Contactar a Fumi-Car por WhatsApp">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><use href="#i-wa" /></svg><span>WhatsApp</span>
+    </a>
+    <script src="base.js?v=2026.10.01"></script>
   </body>
 </html>

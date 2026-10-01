@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://www.fumicar.mx/sitemap.xml
+
+Sitemap: https://fumi-car.com/sitemap.xml
