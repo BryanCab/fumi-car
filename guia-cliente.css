@@ -69,7 +69,8 @@
 .hero-mascot img {
   position: relative;
   z-index: 2;
-  filter: drop-shadow(0 30px 40px rgb(0 0 0 / 0.5));
+  border-radius: 28px;
+  box-shadow: 0 30px 60px -15px rgb(0 0 0 / 0.6);
   animation: bob 5s ease-in-out infinite;
 }
 .orb {
@@ -293,9 +294,10 @@
   border: 1px solid rgb(255 255 255 / 0.14);
 }
 .brand-mark img {
-  width: 110px;
-  height: 110px;
+  width: 130px;
+  height: auto;
   flex: none;
+  border-radius: 16px;
 }
 .brand-mark h3 {
   font-size: 1.6rem;

@@ -1,42 +1,4 @@
-/* Fumi-Car · inicio (carrusel, portal, formulario, lightbox) */
-const hero = $(".hero");
-const slides = $$(".slide");
-const dots = $$(".dots button");
-const SLIDE_MS = 6500;
-let current = 0;
-let slideTimer;
-hero.style.setProperty("--dur", SLIDE_MS + "ms");
-
-function showSlide(n) {
-  current = (n + slides.length) % slides.length;
-  slides.forEach((s, i) => s.classList.toggle("active", i === current));
-  dots.forEach((d, i) => {
-    d.classList.remove("on");
-    d.setAttribute("aria-selected", String(i === current));
-    if (i === current) {
-      void d.offsetWidth; // reinicia la animación de progreso
-      d.classList.add("on");
-    }
-  });
-  const img = $("img", slides[current]);
-  if (img) img.loading = "eager";
-  clearTimeout(slideTimer);
-  if (!reduceMotion) slideTimer = setTimeout(() => showSlide(current + 1), SLIDE_MS);
-}
-dots.forEach((d, i) => d.addEventListener("click", () => showSlide(i)));
-hero.addEventListener("pointerenter", () => {
-  clearTimeout(slideTimer);
-  hero.classList.add("paused");
-});
-hero.addEventListener("pointerleave", () => {
-  hero.classList.remove("paused");
-  showSlide(current);
-});
-document.addEventListener("visibilitychange", () => {
-  if (document.hidden) clearTimeout(slideTimer);
-  else showSlide(current);
-});
-showSlide(0);
+/* Fumi-Car · inicio (portal, formulario, lightbox, FAQ) */
 
 /* portal */
 const portalButtons = $$(".chips button");

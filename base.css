@@ -316,22 +316,16 @@ p {
   font-size: 1.4rem;
   letter-spacing: -0.02em;
 }
-.brand img {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: var(--forest);
-  box-shadow: 0 0 0 3px var(--sun);
+.brand-logo {
+  height: 56px;
+  width: auto;
+  border-radius: 14px;
+  background: #000;
+  box-shadow: 0 0 0 2px var(--sun);
+  transition: transform 0.25s;
 }
-.brand small {
-  display: block;
-  font-family: var(--font-body);
-  font-size: 0.62rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  opacity: 0.7;
-  margin-top: -0.2rem;
+.brand:hover .brand-logo {
+  transform: rotate(-3deg) scale(1.04);
 }
 .nav-links {
   display: flex;
@@ -344,6 +338,9 @@ p {
   font-weight: 700;
   font-size: 0.93rem;
   transition: background 0.2s;
+}
+.site-header:not(.stick):not(.solid) .nav-links a:not(.btn) {
+  text-shadow: 0 1px 14px rgb(0 0 0 / 0.6);
 }
 .nav-links a:hover,
 .nav-links a[aria-current="page"] {
@@ -408,9 +405,11 @@ p {
   color: var(--sun);
 }
 .footer-brand .brand {
-  color: #fff;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
   display: inline-flex;
+}
+.footer-brand .brand-logo {
+  height: 92px;
 }
 .footer-brand p {
   max-width: 34ch;
@@ -610,8 +609,8 @@ p {
   .navbar {
     height: 66px;
   }
-  .brand {
-    font-size: 1.25rem;
+  .brand-logo {
+    height: 50px;
   }
 }
 @media (prefers-reduced-motion: reduce) {

@@ -36,12 +36,13 @@
       href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="preload" as="image" href="assets/images/hero-casa.webp" media="(min-width:701px)" fetchpriority="high" />
+    <link rel="preload" as="image" href="assets/images/hero-tecnico.webp" media="(min-width:701px)" fetchpriority="high" />
+    <link rel="preload" as="image" href="assets/images/hero-tecnico-mobile.webp" media="(max-width:700px)" fetchpriority="high" />
     <script>
       document.documentElement.classList.add("js");
     </script>
-    <link rel="stylesheet" href="base.css?v=2026.10.01" />
-    <link rel="stylesheet" href="home.css?v=2026.10.01" />
+    <link rel="stylesheet" href="base.css?v=2026.10.04" />
+    <link rel="stylesheet" href="home.css?v=2026.10.04" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -52,7 +53,7 @@
             "name": "Fumi-Car",
             "url": "https://fumi-car.com/",
             "image": "https://fumi-car.com/assets/images/og-cover.jpg",
-            "logo": "https://fumi-car.com/assets/images/logo-mark.webp",
+            "logo": "https://fumi-car.com/assets/images/logo-fumicar.webp",
             "description": "Control profesional de plagas para hogares y negocios con garantía por escrito, reporte y constancia digital.",
             "telephone": "+525547117493",
             "areaServed": [
@@ -159,8 +160,7 @@
       </div>
       <div class="navbar">
         <a class="brand" href="#inicio" aria-label="Fumi-Car, inicio">
-          <img src="assets/images/logo-mark-sm.webp" width="48" height="48" alt="" />
-          <span>Fumi-Car<small>Control de plagas</small></span>
+          <img class="brand-logo" src="assets/images/logo-fumicar-sm.webp" width="65" height="56" alt="Fumi-Car, control de plagas" />
         </a>
         <button class="menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false">
           <span></span><span></span>
@@ -186,64 +186,23 @@
 
     <main id="contenido">
       <!-- HERO -->
-      <section class="hero" id="inicio" aria-roledescription="carrusel">
-        <div class="hero-slides">
-          <article class="slide active">
-            <picture>
-              <source media="(max-width:700px)" srcset="assets/images/hero-casa-mobile.webp" />
-              <img src="assets/images/hero-casa.webp" width="1536" height="1024" alt="Técnico de Fumi-Car inspeccionando una cocina frente a la clienta" fetchpriority="high" />
-            </picture>
-            <div class="hero-copy">
-              <span class="pill">Control profesional · CDMX y Edomex</span>
-              <h1>Tu hogar, protegido con atención que se nota.</h1>
-              <p>Soluciones claras, discretas y respaldadas con documentación digital.</p>
-              <div class="hero-actions">
-                <a class="btn" href="#contacto">Solicitar servicio</a>
-                <a class="btn btn-ghost" href="#servicios">Ver soluciones</a>
-              </div>
-            </div>
-          </article>
-          <article class="slide">
-            <picture>
-              <source media="(max-width:700px)" srcset="assets/images/hero-tecnico-mobile.webp" />
-              <img src="assets/images/hero-tecnico.webp" width="1536" height="1024" alt="Técnico aplicando un tratamiento focalizado en el perímetro de un jardín" loading="lazy" />
-            </picture>
-            <div class="hero-copy">
-              <span class="pill">Inspección · Tratamiento · Seguimiento</span>
-              <h2>Atendemos el origen, no solo lo visible.</h2>
-              <p>Revisamos puntos críticos y recomendamos acciones concretas.</p>
-              <div class="hero-actions">
-                <a class="btn" href="#servicios">Ver soluciones</a>
-                <a class="btn btn-ghost" href="guia-cliente.html#proceso">Cómo trabajamos</a>
-              </div>
-            </div>
-          </article>
-          <article class="slide">
-            <picture>
-              <source media="(max-width:700px)" srcset="assets/images/jardin-casa-mobile.webp" />
-              <img src="assets/images/jardin-casa.webp" width="1536" height="1024" alt="Casa con jardín atendida por Fumi-Car" loading="lazy" />
-            </picture>
-            <div class="hero-copy">
-              <span class="pill">Respaldo digital con PestOS</span>
-              <h2>Tus documentos cuando los necesites.</h2>
-              <p>Reportes, constancias, planos, mapas de calor y solicitudes.</p>
-              <div class="hero-actions">
-                <a class="btn" href="#portal">Conocer el portal</a>
-                <a class="btn btn-ghost" href="#contacto">Solicitar servicio</a>
-              </div>
-            </div>
-          </article>
-        </div>
+      <section class="hero" id="inicio">
+        <picture class="hero-bg">
+          <source media="(max-width:700px)" srcset="assets/images/hero-tecnico-mobile.webp" />
+          <img src="assets/images/hero-tecnico.webp" width="1536" height="1024" alt="Técnico de Fumi-Car aplicando un tratamiento focalizado en el perímetro de un jardín" fetchpriority="high" />
+        </picture>
         <div class="hero-shade"></div>
-        <div class="hero-ui wrap">
-          <div class="dots" role="tablist" aria-label="Escenas del carrusel">
-            <button class="on" type="button" role="tab" aria-selected="true" aria-label="Escena 1"><i></i></button>
-            <button type="button" role="tab" aria-selected="false" aria-label="Escena 2"><i></i></button>
-            <button type="button" role="tab" aria-selected="false" aria-label="Escena 3"><i></i></button>
+        <div class="hero-copy wrap">
+          <span class="pill">Control profesional · CDMX y Edomex</span>
+          <h1>Tu hogar, protegido con atención que se nota.</h1>
+          <p>Atendemos el origen, no solo lo visible. Soluciones claras, discretas y respaldadas con documentación digital.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#contacto">Solicitar servicio</a>
+            <a class="btn btn-ghost" href="#servicios">Ver soluciones</a>
           </div>
         </div>
         <aside class="hero-card" aria-label="Contacto rápido">
-          <img src="assets/images/logo-mark-sm.webp" width="64" height="64" alt="" />
+          <img class="hc-logo" src="assets/images/logo-fumicar-sm.webp" width="70" height="60" alt="" />
           <div>
             <b>Atención directa</b>
             <span>Te respondemos por WhatsApp en horario de servicio.</span>
@@ -254,24 +213,6 @@
           <div><svg class="ic"><use href="#i-clock" /></svg><span><b>8:00 a 18:00</b>Horario de atención</span></div>
           <div><svg class="ic"><use href="#i-pin" /></svg><span><b>Cobertura metropolitana</b>CDMX y Estado de México</span></div>
           <div><svg class="ic"><use href="#i-phone" /></svg><span><b>55 4711 7493</b>Contacto directo</span></div>
-        </div>
-      </section>
-
-      <!-- CONFIANZA -->
-      <section class="trust" aria-label="Lo que incluye cada servicio">
-        <div class="trust-track">
-          <span><svg class="ic"><use href="#i-shield" /></svg>Garantía por escrito</span>
-          <span><svg class="ic"><use href="#i-file" /></svg>Reporte y constancia digital</span>
-          <span><svg class="ic"><use href="#i-lock" /></svg>Discreción total</span>
-          <span><svg class="ic"><use href="#i-award" /></svg>Personal confiable</span>
-          <span><svg class="ic"><use href="#i-search" /></svg>Inspección de puntos críticos</span>
-          <span><svg class="ic"><use href="#i-pin" /></svg>Vehículos sin emblemas</span>
-          <span><svg class="ic"><use href="#i-shield" /></svg>Garantía por escrito</span>
-          <span><svg class="ic"><use href="#i-file" /></svg>Reporte y constancia digital</span>
-          <span><svg class="ic"><use href="#i-lock" /></svg>Discreción total</span>
-          <span><svg class="ic"><use href="#i-award" /></svg>Personal confiable</span>
-          <span><svg class="ic"><use href="#i-search" /></svg>Inspección de puntos críticos</span>
-          <span><svg class="ic"><use href="#i-pin" /></svg>Vehículos sin emblemas</span>
         </div>
       </section>
 
@@ -321,7 +262,7 @@
           <div class="visit-media reveal">
             <img src="assets/images/tecnico-tablet.webp" width="1536" height="1024" loading="lazy" alt="Técnico de Fumi-Car registrando una inspección en tableta" />
             <div class="visit-badge">
-              <img src="assets/images/logo-mark-sm.webp" width="56" height="56" alt="" />
+              <img class="vb-logo" src="assets/images/logo-fumicar-sm.webp" width="61" height="52" alt="" />
               <span><b>Inspección registrada</b>Evidencia y reporte digital</span>
             </div>
           </div>
@@ -453,7 +394,7 @@
           </div>
           <div class="phone reveal" style="--d: 0.12s">
             <div class="screen">
-              <b class="screen-title"><img src="assets/images/logo-mark-sm.webp" width="26" height="26" alt="" />Portal Fumi-Car</b>
+              <b class="screen-title"><img src="assets/images/logo-fumicar-sm.webp" width="30" height="26" alt="" />Portal Fumi-Car</b>
               <section class="portal-screen active" data-screen="reports">
                 <small>ÚLTIMO SERVICIO</small>
                 <h3>Control preventivo</h3>
@@ -549,7 +490,7 @@
             <h3>Todo tu servicio, explicado con claridad.</h3>
             <p>Conoce el proceso, los paquetes, los cuidados y los requisitos. Al final encontrarás el reto interactivo Fumi-Car.</p>
             <span class="link-arrow">Abrir la guía</span>
-            <img src="assets/images/logo-mark.webp" width="512" height="512" loading="lazy" alt="" />
+            <img src="assets/images/logo-fumicar.webp" width="640" height="549" loading="lazy" alt="" />
           </a>
         </div>
       </section>
@@ -670,8 +611,7 @@
       <div class="wrap footer-grid">
         <div class="footer-brand">
           <a class="brand" href="#inicio">
-            <img src="assets/images/logo-mark-sm.webp" width="48" height="48" alt="" />
-            <span>Fumi-Car<small>Control de plagas</small></span>
+            <img class="brand-logo" src="assets/images/logo-fumicar-sm.webp" width="65" height="56" alt="Fumi-Car, control de plagas" />
           </a>
           <p>Control profesional de plagas para hogares y negocios, con documentación y seguimiento digital.</p>
         </div>
@@ -710,7 +650,7 @@
       <button type="button" aria-label="Cerrar imagen">×</button>
       <img alt="Trabajo de Fumi-Car" />
     </div>
-    <script src="base.js?v=2026.10.01"></script>
-    <script src="home.js?v=2026.10.01"></script>
+    <script src="base.js?v=2026.10.04"></script>
+    <script src="home.js?v=2026.10.04"></script>
   </body>
 </html>
