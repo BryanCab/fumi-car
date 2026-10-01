@@ -476,6 +476,41 @@ p {
   }
 }
 
+/* ---------- lightbox ---------- */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  background: rgb(6 35 27 / 0.92);
+  backdrop-filter: blur(6px);
+}
+.lightbox[hidden] {
+  display: none;
+}
+.lightbox img {
+  max-height: 86vh;
+  width: auto;
+  max-width: min(92vw, 900px);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+}
+.lightbox button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 48px;
+  height: 48px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--sun);
+  color: var(--forest);
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
 /* ---------- reveal ---------- */
 .js .reveal {
   opacity: 0;

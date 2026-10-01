@@ -73,5 +73,34 @@ const countObserver = new IntersectionObserver(
 );
 $$("[data-count]").forEach((el) => countObserver.observe(el));
 
+/* lightbox: cualquier elemento con data-src abre la imagen ampliada */
+const lb = $(".lightbox");
+if (lb) {
+  let lastFocus;
+  const closeLightbox = () => {
+    lb.hidden = true;
+    document.body.style.overflow = "";
+    lastFocus?.focus();
+  };
+  $$("[data-src]").forEach((el) =>
+    el.addEventListener("click", () => {
+      lastFocus = el;
+      const img = $("img", lb);
+      img.src = el.dataset.src;
+      img.alt = $("img", el)?.alt || "";
+      lb.hidden = false;
+      document.body.style.overflow = "hidden";
+      $("button", lb).focus();
+    }),
+  );
+  $("button", lb).addEventListener("click", closeLightbox);
+  lb.addEventListener("click", (e) => {
+    if (e.target === lb) closeLightbox();
+  });
+  addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !lb.hidden) closeLightbox();
+  });
+}
+
 const year = $("#year");
 if (year) year.textContent = new Date().getFullYear();

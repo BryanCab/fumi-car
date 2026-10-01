@@ -1,4 +1,4 @@
-/* Fumi-Car · inicio (portal, formulario, lightbox, FAQ) */
+/* Fumi-Car · inicio (portal, formulario, FAQ) */
 
 /* portal */
 const portalButtons = $$(".chips button");
@@ -89,33 +89,6 @@ form.addEventListener("submit", (e) => {
   const d = new FormData(form);
   const text = `Hola Fumi-Car, soy ${d.get("n")}.\nMi teléfono: ${d.get("t").replace(/\D/g, "")}\nEspacio: ${d.get("e")}\nZona: ${getZone()}\nMensaje: ${d.get("m")}`;
   open("https://wa.me/525547117493?text=" + encodeURIComponent(text), "_blank", "noopener");
-});
-
-/* lightbox */
-const lb = $(".lightbox");
-let lastFocus;
-function closeLightbox() {
-  lb.hidden = true;
-  document.body.style.overflow = "";
-  lastFocus?.focus();
-}
-$$(".gallery-card").forEach((b) =>
-  b.addEventListener("click", () => {
-    lastFocus = b;
-    const img = $("img", lb);
-    img.src = b.dataset.src;
-    img.alt = $("img", b).alt;
-    lb.hidden = false;
-    document.body.style.overflow = "hidden";
-    $("button", lb).focus();
-  }),
-);
-$("button", lb).addEventListener("click", closeLightbox);
-lb.addEventListener("click", (e) => {
-  if (e.target === lb) closeLightbox();
-});
-addEventListener("keydown", (e) => {
-  if (e.key === "Escape" && !lb.hidden) closeLightbox();
 });
 
 /* FAQ: abre una a la vez */
