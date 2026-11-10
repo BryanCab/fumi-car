@@ -15,21 +15,25 @@
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   /* ---------- configuración ---------- */
-  const START = Date.parse("2026-11-13T00:00:00-06:00"); // viernes 13
+  const START = Date.parse("2026-11-13T00:00:00-06:00"); // viernes 13 (inicio oficial)
+  // PRUEBAS: la ruleta se abre desde aquí. Para dejarla solo desde el 13,
+  // poner OPEN_FROM = START. Los giros hechos antes de START se guardan con
+  // otra llave y NO consumen el intento real.
+  const OPEN_FROM = Date.parse("2026-11-10T00:00:00-06:00");
   const MID = Date.parse("2026-11-15T12:00:00-06:00"); // mitad del Buen Fin
   const END = Date.parse("2026-11-17T23:59:59-06:00"); // martes 17
   const WA = "525547117493";
   const SPIN_MS = reduce ? 1200 : 10000;
   const TURNS = reduce ? 2 : 9;
-  const KEY = "fc_bf26";
+  const KEY = Date.now() < START ? "fc_bf26_prueba" : "fc_bf26";
   const SALT = "fumicar-bf26";
 
   const PRIZES = [
-    { p: 10, fill: "#b7ec6b", ink: "#06231b", from: START },
-    { p: 15, fill: "#11634a", ink: "#ffffff", from: START },
-    { p: 20, fill: "#ffc61a", ink: "#06231b", from: START },
-    { p: 25, fill: "#fffdf7", ink: "#06231b", from: START },
-    { p: 30, fill: "#5dbb3f", ink: "#06231b", from: START },
+    { p: 10, fill: "#b7ec6b", ink: "#06231b", from: OPEN_FROM },
+    { p: 15, fill: "#11634a", ink: "#ffffff", from: OPEN_FROM },
+    { p: 20, fill: "#ffc61a", ink: "#06231b", from: OPEN_FROM },
+    { p: 25, fill: "#fffdf7", ink: "#06231b", from: OPEN_FROM },
+    { p: 30, fill: "#5dbb3f", ink: "#06231b", from: OPEN_FROM },
     { p: 50, fill: "#ff7a4d", ink: "#06231b", from: MID },
   ];
   const SEG = 360 / PRIZES.length;
@@ -234,7 +238,7 @@
   let spinning = false;
   let timer = null;
 
-  const phase = () => { const t = now(); return t < START ? "before" : t > END ? "closed" : "open"; };
+  const phase = () => { const t = now(); return t < OPEN_FROM ? "before" : t > END ? "closed" : "open"; };
   function countdown(ms) {
     const s = Math.max(0, Math.floor(ms / 1000));
     const d = Math.floor(s / 86400), h = Math.floor((s % 86400) / 3600), m = Math.floor((s % 3600) / 60);
