@@ -379,9 +379,9 @@ body.promo-dark {
   z-index: 2;
   left: 50%;
   top: 50%;
-  width: 27%;
+  width: 30%;
   aspect-ratio: 1;
-  margin: -13.5% 0 0 -13.5%;
+  margin: -15% 0 0 -15%;
   border-radius: 50%;
   background: radial-gradient(circle at 50% 35%, #123d2f, #06231b 70%);
   box-shadow:
@@ -396,8 +396,9 @@ body.promo-dark {
   height: 100%;
   display: block;
   border-radius: 50%;
-  object-fit: cover;
-  transform: scale(1.04);
+  object-fit: contain;
+  padding: 7%;
+  box-sizing: border-box;
 }
 @keyframes hubBeat {
   0%,
@@ -429,6 +430,11 @@ body.promo-dark {
   top: 6%;
   animation: peek 4.2s ease-in-out infinite;
 }
+.gift-mascot img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 .gift-box {
   position: absolute;
   left: 0;
@@ -439,10 +445,10 @@ body.promo-dark {
 .gift-hat {
   position: absolute;
   z-index: 2;
-  left: 22%;
-  top: -12%;
-  width: 40%;
-  transform: rotate(-12deg);
+  left: 24%;
+  top: -16%;
+  width: 36%;
+  transform: rotate(-10deg);
   transform-origin: 50% 100%;
   animation: hatSway 3.4s ease-in-out infinite;
 }
@@ -467,22 +473,24 @@ body.promo-dark {
 }
 @keyframes peek {
   0%,
-  60%,
   100% {
-    transform: translateY(20%);
+    transform: translateY(0);
   }
-  72%,
-  88% {
+  18%,
+  80% {
+    transform: translateY(-40%);
+  }
+  50% {
     transform: translateY(-34%);
   }
 }
 @keyframes hatSway {
   0%,
   100% {
-    transform: rotate(-12deg);
+    transform: rotate(-10deg);
   }
   50% {
-    transform: rotate(-6deg);
+    transform: rotate(-4deg);
   }
 }
 
@@ -1090,7 +1098,7 @@ body.promo-dark {
     animation: none;
   }
   .gift-mascot {
-    transform: translateY(-20%);
+    transform: translateY(-36%);
   }
   .band {
     transform: none;
