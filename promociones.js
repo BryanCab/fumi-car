@@ -198,7 +198,8 @@
       const [px, py] = pt(189.5, i * SEG + SEG / 2);
       s += `<circle cx="${px.toFixed(2)}" cy="${py.toFixed(2)}" r="5.5" fill="#ffc61a" stroke="#06231b" stroke-width="1.5"/>`;
     });
-    s += `<circle cx="200" cy="200" r="38" fill="#06231b"/><circle cx="200" cy="200" r="30" fill="#ffc61a"/><circle cx="200" cy="200" r="11" fill="#06231b"/>`;
+    // el centro lo cubre el logo (.hub, fuera del SVG para que no gire)
+    s += `<circle cx="200" cy="200" r="58" fill="#06231b"/>`;
     s += `</svg>`;
     wheel.innerHTML = s;
   }
