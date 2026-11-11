@@ -15,7 +15,9 @@
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   /* ---------- configuración ---------- */
-  const START = Date.parse("2026-11-13T00:00:00-06:00"); // viernes 13 (inicio oficial)
+  // Inicio real de la promo: antes de esta hora la ruleta está en modo prueba
+  // (giros repetibles con el botón "Probar de nuevo"); desde aquí es 1 giro por persona.
+  const START = Date.parse("2026-11-12T10:00:00-06:00"); // jueves 12, 10:00 am
   // PRUEBAS: la ruleta se abre desde aquí. Para dejarla solo desde el 13,
   // poner OPEN_FROM = START. Los giros hechos antes de START se guardan con
   // otra llave y NO consumen el intento real.
@@ -26,9 +28,7 @@
   const SPIN_MS = reduce ? 1200 : 10000;
   const TURNS = reduce ? 2 : 9;
   const KEY = Date.now() < START ? "fc_bf26_prueba" : "fc_bf26";
-  const TEST = KEY === "fc_bf26_prueba"; // giros de prueba (antes del 13)
-  // El botón "Probar de nuevo" se retira el 12 de nov a las 10:00 (CDMX).
-  const RETRY_UNTIL = Date.parse("2026-11-12T10:00:00-06:00");
+  const TEST = KEY === "fc_bf26_prueba"; // giros de prueba (antes de START)
   const SALT = "fumicar-bf26";
 
   const PRIZES = [
@@ -56,7 +56,7 @@
      teléfono no abra la ruleta antes ni active el 50% antes de tiempo. */
   let skew = 0;
   const now = () => Date.now() + skew;
-  const canRetry = () => TEST && now() < RETRY_UNTIL;
+  const canRetry = () => TEST && now() < START;
   async function syncClock() {
     try {
       const ac = new AbortController();
@@ -321,7 +321,7 @@
     $("#resWa").href = `https://wa.me/${WA}?text=${encodeURIComponent(msg)}`;
     action.hidden = true;
     result.hidden = false;
-    $("#retryBtn").hidden = !canRetry(); // solo en pruebas y hasta RETRY_UNTIL
+    $("#retryBtn").hidden = !canRetry(); // solo en modo prueba (antes de START)
     if (fresh) {
       result.focus({ preventScroll: true });
       result.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "center" });
