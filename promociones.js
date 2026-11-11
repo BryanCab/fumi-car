@@ -26,6 +26,7 @@
   const SPIN_MS = reduce ? 1200 : 10000;
   const TURNS = reduce ? 2 : 9;
   const KEY = Date.now() < START ? "fc_bf26_prueba" : "fc_bf26";
+  const TEST = KEY === "fc_bf26_prueba"; // giros de prueba (antes del 13)
   const SALT = "fumicar-bf26";
 
   const PRIZES = [
@@ -145,6 +146,18 @@
       } catch (_) {}
     },
   };
+  async function clearRecord() {
+    try { localStorage.removeItem(KEY); } catch (_) {}
+    try { document.cookie = `${KEY}=; max-age=0; path=/; SameSite=Lax`; } catch (_) {}
+    try {
+      const db = await idb.open();
+      await new Promise((res) => {
+        const tx = db.transaction("k", "readwrite");
+        tx.objectStore("k").delete(KEY);
+        tx.oncomplete = tx.onerror = tx.onabort = () => { db.close(); res(); };
+      });
+    } catch (_) {}
+  }
   async function loadRecord() {
     const found = [ls.get(), ck.get(), await idb.get()].find(valid) || null;
     if (found) saveRecord(found); // repara las copias que falten
@@ -305,6 +318,7 @@
     $("#resWa").href = `https://wa.me/${WA}?text=${encodeURIComponent(msg)}`;
     action.hidden = true;
     result.hidden = false;
+    $("#retryBtn").hidden = !TEST; // solo antes del 13: no aplica al giro real
     if (fresh) {
       result.focus({ preventScroll: true });
       result.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "center" });
@@ -355,6 +369,15 @@
   }
 
   btn.addEventListener("click", onSpin);
+  $("#retryBtn").addEventListener("click", async () => {
+    if (!TEST || spinning) return;
+    await clearRecord();
+    record = null;
+    result.hidden = true;
+    $("#retryBtn").hidden = true;
+    render();
+    stage.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
+  });
   $("#copyBtn").addEventListener("click", async (e) => {
     const b = e.currentTarget;
     try {

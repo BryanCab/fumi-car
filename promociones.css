@@ -730,6 +730,30 @@ body.promo-dark {
   color: var(--on-dark-mute);
 }
 
+.retry {
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0.7rem 1rem;
+  border: 2px dashed rgb(255 255 255 / 0.35);
+  border-radius: 14px;
+  background: transparent;
+  color: var(--on-dark-soft);
+  font-weight: 700;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition:
+    border-color 0.2s,
+    color 0.2s;
+}
+.retry[hidden] {
+  display: none;
+}
+.retry:hover {
+  border-color: var(--sun);
+  color: var(--sun);
+}
+
 /* ---------- cinta (se desplaza con el scroll) ---------- */
 .band {
   overflow: hidden;
