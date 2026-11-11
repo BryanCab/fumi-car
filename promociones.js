@@ -27,6 +27,8 @@
   const TURNS = reduce ? 2 : 9;
   const KEY = Date.now() < START ? "fc_bf26_prueba" : "fc_bf26";
   const TEST = KEY === "fc_bf26_prueba"; // giros de prueba (antes del 13)
+  // El botón "Probar de nuevo" se retira el 12 de nov a las 10:00 (CDMX).
+  const RETRY_UNTIL = Date.parse("2026-11-12T10:00:00-06:00");
   const SALT = "fumicar-bf26";
 
   const PRIZES = [
@@ -54,6 +56,7 @@
      teléfono no abra la ruleta antes ni active el 50% antes de tiempo. */
   let skew = 0;
   const now = () => Date.now() + skew;
+  const canRetry = () => TEST && now() < RETRY_UNTIL;
   async function syncClock() {
     try {
       const ac = new AbortController();
@@ -318,7 +321,7 @@
     $("#resWa").href = `https://wa.me/${WA}?text=${encodeURIComponent(msg)}`;
     action.hidden = true;
     result.hidden = false;
-    $("#retryBtn").hidden = !TEST; // solo antes del 13: no aplica al giro real
+    $("#retryBtn").hidden = !canRetry(); // solo en pruebas y hasta RETRY_UNTIL
     if (fresh) {
       result.focus({ preventScroll: true });
       result.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "center" });
@@ -370,7 +373,7 @@
 
   btn.addEventListener("click", onSpin);
   $("#retryBtn").addEventListener("click", async () => {
-    if (!TEST || spinning) return;
+    if (!canRetry() || spinning) return;
     await clearRecord();
     record = null;
     result.hidden = true;
