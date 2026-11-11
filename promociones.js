@@ -238,6 +238,32 @@
   let spinning = false;
   let timer = null;
 
+  /* ---------- giro lento en reposo (funciona igual en mobile) ----------
+     Mientras nadie ha girado, la ruleta avanza despacio sola y el puntero
+     "tintinea" al pasar cada gajo. Se detiene al girar, al tener premio o
+     cuando la ruleta sale de la pantalla. */
+  function initIdle() {
+    if (reduce) return;
+    let visible = true;
+    let lastT = 0;
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver((e) => { visible = e[0].isIntersecting; }, { threshold: 0.05 }).observe(wheel);
+    }
+    const IDLE_DEG_S = 14;
+    const loop = (t) => {
+      const dt = Math.min((t - lastT) / 1000, 0.05);
+      lastT = t;
+      if (!spinning && !record && visible && !document.hidden && dt > 0) {
+        const before = Math.floor((angle + SEG / 2) / SEG);
+        angle += IDLE_DEG_S * dt;
+        wheel.style.transform = `rotate(${angle.toFixed(2)}deg)`;
+        if (Math.floor((angle + SEG / 2) / SEG) !== before) flick();
+      }
+      requestAnimationFrame(loop);
+    };
+    requestAnimationFrame((t) => { lastT = t; loop(t); });
+  }
+
   const phase = () => { const t = now(); return t < OPEN_FROM ? "before" : t > END ? "closed" : "open"; };
   function countdown(ms) {
     const s = Math.max(0, Math.floor(ms / 1000));
@@ -390,6 +416,7 @@
   buildWheel();
   render();
   initScroll();
+  initIdle();
   loadRecord().then((rec) => {
     if (rec && !record) { record = rec; showResult(rec, false); }
     render();
