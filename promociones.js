@@ -17,7 +17,7 @@
   /* ---------- configuración ---------- */
   // Inicio real de la promo: antes de esta hora la ruleta está en modo prueba
   // (giros repetibles con el botón "Probar de nuevo"); desde aquí es 1 giro por persona.
-  const START = Date.parse("2026-11-13T10:00:00-06:00"); // viernes 13, 10:00 am
+  const START = Date.parse("2026-11-12T10:00:00-06:00"); // jueves 12, 10:00 am
   // PRUEBAS: la ruleta se abre desde aquí. Para dejarla solo desde el 13,
   // poner OPEN_FROM = START. Los giros hechos antes de START se guardan con
   // otra llave y NO consumen el intento real.
