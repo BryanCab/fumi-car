@@ -17,7 +17,7 @@
   /* ---------- configuración ---------- */
   // Inicio real de la promo: antes de esta hora la ruleta está en modo prueba
   // (giros repetibles con el botón "Probar de nuevo"); desde aquí es 1 giro por persona.
-  const START = Date.parse("2026-11-12T10:00:00-06:00"); // jueves 12, 10:00 am
+  const START = Date.parse("2026-11-13T10:00:00-06:00"); // viernes 13, 10:00 am
   // PRUEBAS: la ruleta se abre desde aquí. Para dejarla solo desde el 13,
   // poner OPEN_FROM = START. Los giros hechos antes de START se guardan con
   // otra llave y NO consumen el intento real.
@@ -214,10 +214,35 @@
       const [px, py] = pt(189.5, i * SEG + SEG / 2);
       s += `<circle cx="${px.toFixed(2)}" cy="${py.toFixed(2)}" r="5.5" fill="#ffc61a" stroke="#06231b" stroke-width="1.5"/>`;
     });
+    // brillo de "metal pulido": luz arriba-izquierda y sombra hacia el borde
+    s += `<defs><radialGradient id="sheen" cx="38%" cy="30%" r="80%"><stop offset="0" stop-color="#fff" stop-opacity=".34"/><stop offset=".45" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".3"/></radialGradient></defs>`;
+    s += `<circle cx="200" cy="200" r="${R}" fill="url(#sheen)"/>`;
+    // estrellitas en el gajo del 50%
+    const big = PRIZES.findIndex((p) => p.p === 50);
+    if (big >= 0) {
+      s += `<g transform="rotate(${big * SEG} 200 200)" fill="#fff" opacity=".9">`;
+      [[-52, 52, 7], [50, 56, 6], [-30, 36, 4.5], [34, 40, 4.5]].forEach(([dx, dy, r]) => {
+        const cx = 200 + dx, cy = 200 - R + dy;
+        s += `<path d="M${cx} ${cy - r}L${cx + r * 0.3} ${cy - r * 0.3}L${cx + r} ${cy}L${cx + r * 0.3} ${cy + r * 0.3}L${cx} ${cy + r}L${cx - r * 0.3} ${cy + r * 0.3}L${cx - r} ${cy}L${cx - r * 0.3} ${cy - r * 0.3}Z"/>`;
+      });
+      s += `</g>`;
+    }
     // el centro lo cubre el logo (.hub, fuera del SVG para que no gire)
     s += `<circle cx="200" cy="200" r="58" fill="#06231b"/>`;
     s += `</svg>`;
     wheel.innerHTML = s;
+
+    // foquitos de feria alrededor de la ruleta (corren en cadena; más rápido al girar)
+    const rim = $("#rim");
+    if (rim) {
+      const N = 28;
+      let b = "";
+      for (let i = 0; i < N; i++) {
+        const a = (i / N) * Math.PI * 2;
+        b += `<i style="left:${(50 + 51.5 * Math.sin(a)).toFixed(2)}%;top:${(50 - 51.5 * Math.cos(a)).toFixed(2)}%;--i:${i}"></i>`;
+      }
+      rim.innerHTML = b;
+    }
   }
 
   /* ---------- giro ---------- */
@@ -238,9 +263,11 @@
     const a0 = angle;
     const t0 = performance.now();
     let last = Math.floor((a0 + SEG / 2) / SEG);
+    const WIND = reduce ? 0 : 0.05; // tirón hacia atrás antes de arrancar
     const frame = (t) => {
       const k = Math.min((t - t0) / SPIN_MS, 1);
-      angle = a0 + delta * (1 - Math.pow(1 - k, 3));
+      const back = k < WIND ? 16 * Math.sin((Math.PI * k) / WIND) : 0;
+      angle = a0 + delta * (1 - Math.pow(1 - k, 4)) - back;
       wheel.style.transform = `rotate(${angle.toFixed(2)}deg)`;
       const tick = Math.floor((angle + SEG / 2) / SEG);
       if (tick !== last) { last = tick; flick(); }
@@ -266,7 +293,7 @@
     if ("IntersectionObserver" in window) {
       new IntersectionObserver((e) => { visible = e[0].isIntersecting; }, { threshold: 0.05 }).observe(wheel);
     }
-    const IDLE_DEG_S = 14;
+    const IDLE_DEG_S = 22;
     const loop = (t) => {
       const dt = Math.min((t - lastT) / 1000, 0.05);
       lastT = t;
@@ -328,23 +355,30 @@
     }
   }
 
-  function burst() {
+  function burst(pct) {
     if (reduce) return;
     const box = $("#confetti");
-    const colors = ["#ffc61a", "#b7ec6b", "#ff6b3d", "#8fcbff", "#5dbb3f"];
+    const wrap = $("#wheelWrap");
+    const colors = ["#ffc61a", "#b7ec6b", "#ff6b3d", "#8fcbff", "#5dbb3f", "#ffffff", "#e0162f"];
+    const mega = pct >= 50;
+    const count = mega ? 120 : 80;
     const frag = document.createDocumentFragment();
-    for (let i = 0; i < 26; i++) {
+    for (let i = 0; i < count; i++) {
       const a = Math.random() * Math.PI * 2;
-      const d = 150 + Math.random() * 120;
+      const d = 120 + Math.random() * (mega ? 330 : 250);
       const el = document.createElement("i");
+      el.className = i % 3 === 0 ? "c-dot" : i % 7 === 0 ? "c-star" : "";
       el.style.setProperty("--x", `${Math.cos(a) * d}px`);
-      el.style.setProperty("--y", `${Math.sin(a) * d - 40}px`);
-      el.style.setProperty("--r", `${Math.random() * 720 - 360}deg`);
+      el.style.setProperty("--y", `${Math.sin(a) * d - 70}px`);
+      el.style.setProperty("--r", `${Math.random() * 900 - 450}deg`);
       el.style.setProperty("--c", colors[i % colors.length]);
+      el.style.animationDelay = `${(i % 2) * 0.18}s`;
       frag.append(el);
     }
     box.append(frag);
-    setTimeout(() => (box.textContent = ""), 1900);
+    wrap.classList.add("win");
+    setTimeout(() => (box.textContent = ""), 2300);
+    setTimeout(() => wrap.classList.remove("win"), 2800);
   }
 
   async function onSpin() {
@@ -363,9 +397,11 @@
     record = rec;
     await saveRecord(rec);
 
+    $("#wheelWrap").classList.add("is-spinning");
     spinTo(win.i, () => {
       spinning = false;
-      burst();
+      $("#wheelWrap").classList.remove("is-spinning");
+      burst(rec.p);
       if (navigator.vibrate) navigator.vibrate(30);
       showResult(rec, true);
     });

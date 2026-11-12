@@ -312,6 +312,141 @@ body.promo-dark {
     transform: scale(1.06);
   }
 }
+/* rayos de luz giratorios detrás de la ruleta */
+.rays {
+  position: absolute;
+  inset: -24%;
+  z-index: -1;
+  border-radius: 50%;
+  background: repeating-conic-gradient(from 0deg, rgb(255 198 26 / 0.22) 0 7deg, transparent 7deg 20deg);
+  -webkit-mask-image: radial-gradient(closest-side, #000 38%, transparent 100%);
+  mask-image: radial-gradient(closest-side, #000 38%, transparent 100%);
+  animation: raysSpin 24s linear infinite;
+  pointer-events: none;
+}
+@keyframes raysSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.wheel-wrap.is-spinning .rays {
+  animation-duration: 3s;
+  opacity: 1;
+  filter: brightness(1.5);
+}
+.wheel-wrap.is-spinning::before {
+  animation-duration: 0.9s;
+  background: radial-gradient(closest-side, rgb(255 198 26 / 0.6), rgb(255 122 77 / 0.18) 68%, transparent);
+}
+
+/* foquitos de feria alrededor del aro */
+.rim {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+.rim i {
+  position: absolute;
+  width: 3.4%;
+  aspect-ratio: 1;
+  margin: -1.7% 0 0 -1.7%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #fff, #ffe27a 45%, #ffc61a);
+  box-shadow:
+    0 0 0 2px #06231b,
+    0 0 12px 3px rgb(255 198 26 / 0.85);
+  animation: bulb 1.4s linear infinite;
+  animation-delay: calc(var(--i) * -0.05s);
+}
+@keyframes bulb {
+  0%,
+  100% {
+    opacity: 1;
+    filter: none;
+  }
+  50% {
+    opacity: 0.35;
+    filter: saturate(0.5) brightness(0.8);
+  }
+}
+.wheel-wrap.is-spinning .rim i {
+  animation-duration: 0.45s;
+}
+.wheel-wrap.win .rim i {
+  animation: bulbWin 0.28s steps(2) 9;
+  animation-delay: 0s;
+}
+@keyframes bulbWin {
+  0% {
+    opacity: 1;
+    box-shadow:
+      0 0 0 2px #06231b,
+      0 0 20px 7px #fff;
+  }
+  100% {
+    opacity: 0.25;
+  }
+}
+.wheel-wrap.win {
+  animation: winPop 0.7s var(--ease);
+}
+@keyframes winPop {
+  30% {
+    scale: 1.045;
+  }
+}
+
+/* destellos que titilan */
+.spark {
+  position: absolute;
+  z-index: 3;
+  width: 7%;
+  aspect-ratio: 1;
+  background: #fff;
+  clip-path: polygon(50% 0, 62% 38%, 100% 50%, 62% 62%, 50% 100%, 38% 62%, 0 50%, 38% 38%);
+  filter: drop-shadow(0 0 6px #ffc61a);
+  opacity: 0;
+  pointer-events: none;
+  animation: twinkle 2.8s ease-in-out infinite;
+}
+.spark.s1 {
+  left: -5%;
+  top: 14%;
+}
+.spark.s2 {
+  right: -6%;
+  top: 52%;
+  width: 5%;
+  animation-delay: 0.9s;
+}
+.spark.s3 {
+  left: 4%;
+  bottom: -3%;
+  width: 5.5%;
+  animation-delay: 1.7s;
+}
+.spark.s4 {
+  right: 14%;
+  bottom: -5%;
+  animation-delay: 2.2s;
+}
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.2) rotate(0);
+  }
+  45% {
+    opacity: 1;
+    transform: scale(1.1) rotate(45deg);
+  }
+  70% {
+    opacity: 0;
+    transform: scale(0.4) rotate(90deg);
+  }
+}
+
 .wheel-base {
   position: absolute;
   inset: 3%;
@@ -509,7 +644,18 @@ body.promo-dark {
   border-radius: 3px;
   background: var(--c);
   opacity: 0;
-  animation: pop 1.7s var(--ease) forwards;
+  animation: pop 2.1s var(--ease) forwards;
+}
+.confetti i.c-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+}
+.confetti i.c-star {
+  width: 18px;
+  height: 18px;
+  border-radius: 0;
+  clip-path: polygon(50% 0, 62% 38%, 100% 50%, 62% 62%, 50% 100%, 38% 62%, 0 50%, 38% 38%);
 }
 @keyframes pop {
   0% {
@@ -537,7 +683,10 @@ body.promo-dark {
   padding: 1.35rem 1.5rem;
   border: 0;
   border-radius: 22px;
-  background: var(--sun);
+  background-color: var(--sun);
+  background-image: linear-gradient(105deg, transparent 38%, rgb(255 255 255 / 0.7) 50%, transparent 62%);
+  background-size: 260% 100%;
+  background-position: 130% 0;
   color: var(--forest);
   font-family: var(--font-display);
   font-weight: 800;
@@ -564,7 +713,19 @@ body.promo-dark {
 }
 .bf[data-phase="open"] .spin-btn:not(:disabled) {
   /* usa la propiedad "scale" para no pisar el translate del hover/active */
-  animation: beat 2.4s ease-in-out infinite;
+  animation:
+    beat 2.4s ease-in-out infinite,
+    shine 3s ease-in-out infinite;
+}
+@keyframes shine {
+  0%,
+  35% {
+    background-position: 130% 0;
+  }
+  75%,
+  100% {
+    background-position: -30% 0;
+  }
 }
 .bf[data-phase="open"] .spin-btn:not(:disabled)::after {
   animation: ring 2.4s ease-out infinite;
@@ -594,7 +755,7 @@ body.promo-dark {
 }
 .spin-btn:hover:not(:disabled) {
   transform: translateY(-2px);
-  background: #ffd24a;
+  background-color: #ffd24a;
 }
 .spin-btn:active:not(:disabled) {
   transform: translateY(5px);
@@ -1110,6 +1271,11 @@ body.promo-dark {
     animation: none;
   }
   .wheel-wrap::before,
+  .rays,
+  .rim i,
+  .spark,
+  .wheel-wrap.win,
+  .wheel-wrap.win .rim i,
   .bf[data-phase="open"] .spin-btn:not(:disabled),
   .hub,
   .gift,
