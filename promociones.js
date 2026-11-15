@@ -22,7 +22,7 @@
   // poner OPEN_FROM = START. Los giros hechos antes de START se guardan con
   // otra llave y NO consumen el intento real.
   const OPEN_FROM = Date.parse("2026-11-10T00:00:00-06:00");
-  const MID = Date.parse("2026-11-15T12:00:00-06:00"); // mitad del Buen Fin
+  const MID = Date.parse("2026-11-15T11:50:00-06:00"); // mitad del Buen Fin (50% activo)
   const END = Date.parse("2026-11-17T23:59:59-06:00"); // martes 17
   const WA = "525547117493";
   const SPIN_MS = reduce ? 1200 : 10000;
